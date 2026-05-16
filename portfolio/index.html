@@ -14,11 +14,11 @@
 ════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#020617;
-  --bg1:#030712;
+  --bg:#050816;
+  --bg1:#0b1120;
   --bg2:#0f172a;
   --bg3:#1e293b;
-  --surface:rgba(255,255,255,0.03);
+  --surface:rgba(255,255,255,0.02);
   --g:#3b82f6;
   --g-cyan:#06b6d4;
   --g-purple:#8b5cf6;
@@ -369,7 +369,12 @@ nav.solid{
 .about-img-outer{
   position:relative;
 }
+.about-img-outer::before{
+  content:'';position:absolute;
+  inset:16px -16px -16px 16px;
   border:1px solid var(--border);
+  border-radius:12px;z-index:0;
+}
 .about-img-inner{
   position:relative;z-index:1;
   border-radius:12px;overflow:hidden;
@@ -458,42 +463,77 @@ nav.solid{
 /* ════════════════════════════════════════
    SERVICES
 ════════════════════════════════════════ */
-.svc-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border:1px solid var(--border);
-  border-radius:12px;overflow:hidden;
+.sec-title.grad{
+  background: linear-gradient(135deg, #fff 30%, var(--g-cyan) 60%, var(--g-purple) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: grad-flow 8s linear infinite;
+}
+@keyframes grad-flow{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+
+/* ════════════════════════════════════════
+   BENTO SERVICES
+   ════════════════════════════════════════ */
+.svc-bento{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:minmax(240px,auto);
+  gap:1.5rem;
+  margin-top:3rem;
 }
 .svc-card{
-  padding:2.5rem 2rem;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  background:var(--surface);
-  position:relative;overflow:hidden;
-  transition:background .3s;
+  padding:2.5rem;
+  background:rgba(255,255,255,0.015);
+  border:1px solid var(--border);
+  border-radius:24px;
+  position:relative;
+  overflow:hidden;
+  transition:all .4s cubic-bezier(.23,1,.32,1);
+  backdrop-filter:blur(16px);
+  display:flex;flex-direction:column;
 }
-.svc-card:nth-child(3n){border-right:none}
-.svc-card:nth-child(n+4){border-bottom:none}
-.svc-card::after{
-  content:'';position:absolute;
-  bottom:0;left:0;right:0;height:1.5px;
-  background:linear-gradient(90deg,transparent,var(--g),transparent);
-  transform:translateY(100%);
-  transition:transform .35s ease;
+.svc-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(59,130,246,0.08), transparent 40%);
+  z-index:1;pointer-events:none;
 }
-.svc-card:hover{background:rgba(255,255,255,0.02)}
-.svc-card:hover::after{transform:translateY(0)}
-.svc-num{font-family:var(--mn);font-size:.65rem;color:var(--muted);letter-spacing:.12em;margin-bottom:1.5rem;display:block}
+.svc-card:hover{
+  transform:translateY(-8px) scale(1.01);
+  border-color:rgba(59,130,246,0.3);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(59,130,246,0.1);
+}
+.svc-card.hero{grid-column:span 2;grid-row:span 2;padding:4rem}
+.svc-card.wide{grid-column:span 2}
+
 .svc-ico{
-  width:42px;height:42px;margin-bottom:1.4rem;
-  border:1px solid rgba(0,255,136,.15);border-radius:8px;
+  width:54px;height:54px;margin-bottom:2rem;
+  border-radius:14px;
   display:flex;align-items:center;justify-content:center;
-  background:var(--gd2);
-  transition:border-color .3s,background .3s;
+  background:linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,182,212,0.1));
+  border:1px solid rgba(255,255,255,0.1);
+  transition:transform .3s;
+  position:relative;z-index:2;
 }
-.svc-card:hover .svc-ico{border-color:var(--g);background:var(--gd)}
-.svc-ico svg{width:20px;height:20px;stroke:var(--g);fill:none;stroke-width:1.5;stroke-linecap:round}
-.svc-name{font-family:var(--hd);font-size:1.3rem;letter-spacing:.03em;margin-bottom:.7rem;color:var(--txt)}
-.svc-desc{font-size:.86rem;color:var(--muted);line-height:1.7}
+.svc-card:hover .svc-ico{transform:scale(1.1) rotate(5deg);border-color:var(--g)}
+.svc-ico svg{width:24px;height:24px;stroke:var(--g-cyan);fill:none;stroke-width:1.5}
+
+.svc-name{font-family:var(--hd);font-size:2rem;letter-spacing:.02em;margin-bottom:1.2rem;color:var(--txt);position:relative;z-index:2}
+.svc-card.hero .svc-name{font-size:3.5rem;line-height:1}
+.svc-desc{font-size:1rem;color:var(--muted);line-height:1.7;position:relative;z-index:2;max-width:500px}
+.svc-card.hero .svc-desc{font-size:1.2rem;margin-top:1rem}
+
+.svc-tags{display:flex;gap:.6rem;margin-top:auto;padding-top:2rem;position:relative;z-index:2}
+.s-tag{font-family:var(--mn);font-size:.65rem;color:var(--g-cyan);background:rgba(6,182,212,0.08);padding:.35rem .8rem;border-radius:100px;border:1px solid rgba(6,182,212,0.15)}
+
+@media(max-width:1100px){
+  .svc-bento{grid-template-columns:1fr 1fr}
+  .svc-card.hero{grid-column:span 2;grid-row:span 1}
+}
+@media(max-width:768px){
+  .svc-bento{grid-template-columns:1fr}
+  .svc-card.hero,.svc-card.wide{grid-column:span 1}
+}
 
 /* ════════════════════════════════════════
    SKILLS
@@ -1018,46 +1058,51 @@ nav.solid{
 <div class="section" id="services">
 <div class="section-inner">
   <div class="rv">
-    <div class="eyebrow">What I do</div>
-    <h2 class="sec-title">SERVICES THAT<br>SHIP <em>PRODUCTS</em></h2>
-    <p class="sec-sub">Not just code — complete mobile solutions engineered for scale, performance, and real business outcomes.</p>
+    <div class="eyebrow">Expertise</div>
+    <h2 class="sec-title grad">ENGINEERING<br>MODERN <em>MOBILE</em><br>EXPERIENCES</h2>
+    <p class="sec-sub">Building high-performance applications with a focus on architecture, scalability, and pixel-perfect design.</p>
   </div>
-  <div class="svc-grid rv">
-    <div class="svc-card">
-      <span class="svc-num">01</span>
+  
+  <div class="svc-bento rv">
+    <!-- HERO CARD -->
+    <div class="svc-card hero">
       <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/></svg></div>
-      <div class="svc-name">Flutter App Development</div>
-      <p class="svc-desc">Production-grade iOS & Android apps. Clean architecture, tested code, buttery 60fps UI — shipped on schedule, every time.</p>
+      <div class="svc-name">Flutter Full Stack Development</div>
+      <p class="svc-desc">Creating enterprise-grade iOS & Android applications. I specialize in building complex, high-performance apps that handle heavy data while maintaining silky-smooth 60fps animations.</p>
+      <div class="svc-tags">
+        <span class="s-tag">iOS & Android</span><span class="s-tag">Clean Arch</span><span class="s-tag">Performance</span>
+      </div>
     </div>
+
+    <!-- UI/UX CARD -->
     <div class="svc-card">
-      <span class="svc-num">02</span>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4"/></svg></div>
-      <div class="svc-name">Firebase & API Integration</div>
-      <p class="svc-desc">Firestore, Auth, Cloud Functions, REST APIs — all connected cleanly into your app's data layer with rock-solid error handling.</p>
-    </div>
-    <div class="svc-card">
-      <span class="svc-num">03</span>
       <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
       <div class="svc-name">UI/UX Implementation</div>
-      <p class="svc-desc">Figma to Flutter — pixel-perfect. Every widget, every transition, every state built to delight users and retain them.</p>
+      <p class="svc-desc">Transforming complex design systems into pixel-perfect Flutter widgets with precise attention to detail.</p>
     </div>
+
+    <!-- FIREBASE CARD -->
     <div class="svc-card">
-      <span class="svc-num">04</span>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-      <div class="svc-name">State Management</div>
-      <p class="svc-desc">Provider, MVVM, MVC — the right pattern for the right problem. Scalable, testable, maintainable from day one.</p>
+      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4"/></svg></div>
+      <div class="svc-name">Cloud Backend & Firebase</div>
+      <p class="svc-desc">Scalable database architecture using Firestore and real-time synchronization strategies.</p>
     </div>
-    <div class="svc-card">
-      <span class="svc-num">05</span>
+
+    <!-- WIDE CARD -->
+    <div class="svc-card wide">
       <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-      <div class="svc-name">Performance Optimization</div>
-      <p class="svc-desc">Profile, debug, tune. No jank, no memory leaks, no dropped frames — apps that feel premium because they are.</p>
+      <div class="svc-name">Scalable State Management & Architecture</div>
+      <p class="svc-desc">Expert-level implementation of Provider, MVVM, and Clean Architecture patterns. I build codebases that are easy to test, maintain, and scale to millions of users.</p>
+      <div class="svc-tags">
+        <span class="s-tag">Provider</span><span class="s-tag">MVVM</span><span class="s-tag">Modular Code</span>
+      </div>
     </div>
+
+    <!-- OPTIMIZATION -->
     <div class="svc-card">
-      <span class="svc-num">06</span>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></div>
-      <div class="svc-name">Code Audit & Refactor</div>
-      <p class="svc-desc">Legacy Flutter codebase? I audit, restructure, and future-proof it — without breaking what already works.</p>
+      <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+      <div class="svc-name">Optimization</div>
+      <p class="svc-desc">Reducing app bundle size and optimizing memory usage for low-end devices.</p>
     </div>
   </div>
 </div>
@@ -1121,7 +1166,7 @@ nav.solid{
     <!-- ── FEATURED: GTECH LMS ── -->
     <div class="proj-card wide rv">
       <div class="proj-vis">
-        <canvas id="c-lms" class="proj-vis-canvas"></canvas>
+        <img src="gtech_lms.png" alt="G-Tech LMS" class="proj-vis-canvas" style="object-fit: cover;">
         <div class="proj-cover">
           <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
           <a href="#" class="pb pb-o">Case Study</a>
@@ -1571,7 +1616,7 @@ function drawCanvas(id, hue, label){
   resize(); frame();
 }
 
-drawCanvas('c-lms', 195, '// gtech-lms — rest api + jwt');
+// drawCanvas('c-lms', 195, '// gtech-lms — rest api + jwt');
 drawCanvas('c-ecom', 155, '// ecommerce — rest api + provider');
 drawCanvas('c-pb', 280, '// portfolio-builders — lms + roadmaps');
 drawCanvas('c-notes', 35, '// note-taking — hive + local-storage');
@@ -1584,6 +1629,15 @@ function sendMsg(btn){
   btn.style.border='1px solid rgba(0,255,136,.3)';
   setTimeout(()=>{btn.textContent='Send Message →';btn.removeAttribute('style')},3000);
 }
+
+/* ── BENTO MOUSE TRACK ── */
+document.querySelectorAll('.svc-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x',`${e.clientX-r.left}px`);
+    card.style.setProperty('--mouse-y',`${e.clientY-r.top}px`);
+  });
+});
 
 /* ── ACTIVE NAV LINK ── */
 (function(){
