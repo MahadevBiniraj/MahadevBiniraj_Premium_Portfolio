@@ -661,67 +661,128 @@ nav.solid{
 /* ════════════════════════════════════════
    EXPERIENCE
 ════════════════════════════════════════ */
-.exp-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:3rem}
+.exp-wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;margin-top:3rem}
 /* Timeline */
 .timeline{position:relative;padding-left:2.5rem}
 .timeline::before{
   content:'';position:absolute;left:0;top:8px;bottom:0;
-  width:1px;background:var(--border);
+  width:2px;background:linear-gradient(180deg, var(--g) 0%, #7c3aed 50%, transparent 100%);
 }
-.tl-item{position:relative;margin-bottom:3rem}
+.tl-item{
+  position:relative;margin-bottom:2.5rem;
+  background:linear-gradient(135deg, rgba(255,255,255,0.015) 0%, rgba(255,255,255,0.003) 100%);
+  border:1px solid rgba(255, 255, 255, 0.04);
+  border-radius:12px;padding:2rem;
+  transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tl-item:hover{
+  background:linear-gradient(135deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.008) 100%);
+  border-color:rgba(6, 182, 212, 0.25);
+  box-shadow:0 20px 40px rgba(0,0,0,0.22);
+  transform:translateY(-2px);
+}
 .tl-dot{
   position:absolute;left:-2.5rem;top:8px;
-  width:10px;height:10px;border-radius:50%;
-  background:var(--g);box-shadow:0 0 14px rgba(16,185,129,.6);
-  transform:translateX(-50%);z-index:1;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--g);
+  transform:translateX(-50%);z-index:2;
+}
+.tl-dot::after {
+  content:'';position:absolute;inset:-4px;
+  border:1px solid var(--g);border-radius:50%;
+  animation:pulse-ring 2s infinite ease-out;
+}
+@keyframes pulse-ring {
+  0% { transform:scale(0.6); opacity:1; }
+  100% { transform:scale(1.6); opacity:0; }
 }
 .tl-yr{
-  font-family:var(--mn);font-size:.66rem;
-  color:var(--muted);letter-spacing:.08em;
-  margin-bottom:.5rem;display:block;
+  font-family:var(--mn);font-size:0.78rem;
+  color:#06b6d4;background:rgba(6,182,212,0.08);
+  border:1px solid rgba(6,182,212,0.15);
+  padding:0.25rem 0.6rem;border-radius:100px;
+  letter-spacing:0.06em;margin-bottom:0.8rem;
+  display:inline-block;text-transform:uppercase;
 }
 .tl-role{
-  font-family:var(--hd);font-size:1.4rem;
-  letter-spacing:.02em;color:var(--txt);margin-bottom:.2rem;
+  font-family:var(--hd);font-size:1.55rem;
+  color:#f8fafc;font-weight:700;margin-bottom:0.2rem;
 }
 .tl-co{
-  font-family:var(--mn);font-size:.75rem;
-  color:var(--g);margin-bottom:.9rem;letter-spacing:.04em;
+  font-family:var(--mn);font-size:0.92rem;
+  color:#a78bfa;margin-bottom:1.2rem;display:block;
 }
 .tl-pts{list-style:none}
 .tl-pts li{
-  font-size:.84rem;color:var(--muted);
+  font-size:.96rem;color:var(--muted);
   padding-left:1rem;position:relative;
   line-height:1.65;margin-bottom:.5rem;
 }
 .tl-pts li::before{content:'›';position:absolute;left:0;color:var(--g);font-weight:700}
+.tl-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.2rem}
+.tl-tag{
+  font-size:0.76rem;font-family:var(--mn);
+  color:rgba(248, 250, 252, 0.75);background:rgba(255, 255, 255, 0.03);
+  border:1px solid rgba(255,255,255,0.05);padding:0.2rem 0.5rem;
+  border-radius:4px;text-transform:uppercase;letter-spacing:0.04em;
+}
 /* edu & certs right side */
 .edu-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:1.8rem;
-  transition:border-color .3s;
-  margin-bottom:1.5rem;
+  background:linear-gradient(135deg, rgba(255,255,255,0.015) 0%, rgba(255,255,255,0.003) 100%);
+  border:1px solid rgba(255, 255, 255, 0.04);
+  border-radius:12px;padding:2rem;
+  position:relative;overflow:hidden;
+  transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.edu-card:hover{border-color:rgba(16,185,129,.18)}
-.edu-yr{font-family:var(--mn);font-size:.68rem;color:var(--g);margin-bottom:.5rem}
-.edu-deg{font-family:var(--hd);font-size:1.2rem;letter-spacing:.02em;margin-bottom:.4rem}
-.edu-sch{font-size:.82rem;color:var(--muted);line-height:1.55}
-.edu-grd{font-size:.82rem;color:var(--g);font-weight:600;margin-top:.5rem}
+.edu-card:hover{
+  background:linear-gradient(135deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.008) 100%);
+  border-color:rgba(124, 58, 237, 0.25);
+  box-shadow:0 20px 40px rgba(0,0,0,0.22);
+  transform:translateY(-2px);
+}
+.edu-yr{
+  font-family:var(--mn);font-size:0.78rem;
+  color:#7c3aed;background:rgba(124,58,237,0.08);
+  border:1px solid rgba(124,58,237,0.15);
+  padding:0.25rem 0.6rem;border-radius:100px;
+  letter-spacing:0.06em;margin-bottom:0.8rem;
+  display:inline-block;text-transform:uppercase;
+}
+.edu-deg{font-family:var(--hd);font-size:1.45rem;color:#f8fafc;margin-bottom:0.3rem;font-weight:700}
+.edu-sch{font-size:.94rem;color:var(--muted);line-height:1.6;font-family:var(--bd)}
+.edu-grd{
+  font-size:0.86rem;color:#06b6d4;background:rgba(6,182,212,0.08);
+  border:1px solid rgba(6,182,212,0.15);padding:0.2rem 0.5rem;
+  border-radius:4px;text-transform:uppercase;display:inline-block;
+  margin-top:1rem;font-family:var(--mn);letter-spacing:0.04em;
+}
 .cert-row{
   display:grid;grid-template-columns:1fr 1fr;
   gap:1rem;margin-top:1.5rem;
 }
 .cert-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:1.4rem;
-  display:flex;gap:.9rem;align-items:flex-start;
-  transition:border-color .3s;
+  background:linear-gradient(135deg, rgba(255,255,255,0.015) 0%, rgba(255,255,255,0.003) 100%);
+  border:1px solid rgba(255, 255, 255, 0.04);
+  border-radius:12px;padding:1.5rem;
+  display:flex;gap:1.2rem;align-items:flex-start;
+  transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.cert-card:hover{border-color:rgba(0,255,136,.18)}
-.cert-icon{font-size:1.4rem;flex-shrink:0;line-height:1.3}
-.cert-n{font-weight:600;font-size:.86rem;margin-bottom:.2rem}
-.cert-iss{font-size:.72rem;color:var(--g);margin-bottom:.2rem}
-.cert-bd{font-size:.72rem;color:var(--muted);line-height:1.45}
+.cert-card:hover{
+  background:linear-gradient(135deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.008) 100%);
+  border-color:rgba(6, 182, 212, 0.25);
+  box-shadow:0 15px 30px rgba(0,0,0,0.18);
+  transform:translateY(-2px);
+}
+.cert-icon-wrapper{
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+  box-shadow:0 8px 16px rgba(0,0,0,0.15);
+}
+.cert-n{font-weight:700;font-size:1.0rem;color:#f8fafc;margin-bottom:0.2rem}
+.cert-iss{font-family:var(--mn);font-size:0.8rem;color:#7c3aed;margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.02em}
+.cert-bd{font-size:0.84rem;color:var(--muted);line-height:1.5}
 
 /* ════════════════════════════════════════
    CONTACT
@@ -839,9 +900,361 @@ nav.solid{
   .cs-grid{grid-template-columns:1fr;gap:.5rem}
   .numbers-inner{grid-template-columns:1fr 1fr}
 }
+
+/* ════════════════════════════════════════
+   CINEMATIC INTRO SCREEN
+════════════════════════════════════════ */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #0b1120;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--bd);
+  color: #f8fafc;
+  transition: opacity 1.2s cubic-bezier(0.7, 0, 0.3, 1), transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+}
+#intro-screen.fade-out {
+  opacity: 0;
+  transform: scale(1.15) translateZ(0);
+  pointer-events: none;
+}
+.intro-glow-cyan {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6,182,212,0.18) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  animation: float-glow 8s infinite alternate ease-in-out;
+}
+.intro-glow-purple {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  animation: float-glow 10s infinite alternate-reverse ease-in-out;
+}
+@keyframes float-glow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(4%, 6%) scale(1.1); }
+}
+.intro-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+  opacity: 0.8;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  pointer-events: none;
+}
+.intro-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.intro-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-title-wrap {
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.intro-title {
+  font-family: var(--hd);
+  font-size: clamp(3rem, 7.5vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #f8fafc;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slide-up-reveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+  background: linear-gradient(180deg, #ffffff 40%, rgba(248, 250, 252, 0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-subtitle {
+  font-family: var(--mn);
+  font-size: clamp(0.75rem, 1.8vw, 1.15rem);
+  font-weight: 500;
+  color: #06b6d4;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+  animation-delay: 1.6s;
+  min-height: 1.5em;
+  display: inline-block;
+  text-shadow: 0 0 15px rgba(6,182,212,0.3);
+}
+.intro-btn {
+  font-family: var(--mn);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 2.8s;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.intro-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: 0.5s;
+}
+.intro-btn:hover::before {
+  left: 100%;
+}
+.intro-btn:hover {
+  background: #f8fafc;
+  color: #0b1120;
+  border-color: #f8fafc;
+  box-shadow: 0 0 30px rgba(248, 250, 252, 0.25);
+  transform: translateY(-2px);
+}
+.intro-floating-chips {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+.tech-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+  color: #cbd5e1;
+  font-family: var(--mn);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  animation: float-chip 6s infinite alternate ease-in-out, fade-in 1.5s ease forwards;
+}
+.tech-chip.flutter { top: 22%; left: 16%; animation-delay: 2.2s; }
+.tech-chip.firebase { top: 72%; left: 20%; animation-delay: 2.4s; }
+.tech-chip.nodejs { top: 18%; right: 18%; animation-delay: 2.6s; }
+.tech-chip.mongodb { top: 74%; right: 15%; animation-delay: 2.8s; }
+.tech-chip.react { top: 46%; left: 8%; animation-delay: 2.5s; }
+.tech-chip.restapi { top: 48%; right: 8%; animation-delay: 2.7s; }
+.tech-chip svg { width: 12px; height: 12px; }
+@keyframes float-chip {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(2deg); }
+}
+.intro-cards {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.intro-card {
+  position: absolute;
+  width: min(280px, 25vw);
+  aspect-ratio: 16/10;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  opacity: 0;
+  transform: perspective(1000px) rotateX(10deg) rotateY(-15deg);
+  animation: float-card 8s infinite alternate ease-in-out, fade-in 2s ease forwards;
+}
+.intro-card.left {
+  top: 30%;
+  left: 2%;
+  animation-delay: 3.2s;
+}
+.intro-card.right {
+  bottom: 25%;
+  right: 2%;
+  animation-delay: 3.5s;
+  transform: perspective(1000px) rotateX(8deg) rotateY(18deg);
+}
+.intro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px 12px 0 0;
+}
+.intro-card-dots {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  display: flex;
+  gap: 5px;
+}
+.intro-card-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+@keyframes float-card {
+  0% { transform: perspective(1000px) translateY(0) rotateX(10deg) rotateY(-15deg); }
+  100% { transform: perspective(1000px) translateY(-18px) rotateX(8deg) rotateY(-18deg); }
+}
+@keyframes slide-up-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.intro-active {
+  overflow: hidden;
+}
 </style>
 </head>
-<body>
+<body class="intro-active">
+
+<!-- ── PREMIUM CINEMATIC INTRO SCREEN ── -->
+<div id="intro-screen">
+  <div class="intro-glow-cyan"></div>
+  <div class="intro-glow-purple"></div>
+  <div class="intro-grid"></div>
+  
+  <canvas class="intro-particles" id="intro-particles-canvas"></canvas>
+
+  <!-- Sleek 3D Mockup Cards Floating in Background/Side Space -->
+  <div class="intro-cards">
+    <div class="intro-card left">
+      <div class="intro-card-dots">
+        <div class="intro-card-dot" style="background:#ff5f57"></div>
+        <div class="intro-card-dot" style="background:#febc2e"></div>
+        <div class="intro-card-dot" style="background:#28c840"></div>
+      </div>
+      <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="height: 10px; width: 40%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+        <div style="height: 6px; width: 85%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+        <div style="height: 6px; width: 70%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+        <div style="height: 35px; width: 100%; background: rgba(6,182,212,0.08); border-top: 1px solid rgba(6,182,212,0.15); border-radius: 6px; margin-top: 8px;"></div>
+      </div>
+    </div>
+    <div class="intro-card right">
+      <div class="intro-card-dots">
+        <div class="intro-card-dot" style="background:#ff5f57"></div>
+        <div class="intro-card-dot" style="background:#febc2e"></div>
+        <div class="intro-card-dot" style="background:#28c840"></div>
+      </div>
+      <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; gap: 8px;">
+          <div style="width: 28px; height: 28px; border-radius: 6px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.25);"></div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:4px; justify-content:center;">
+            <div style="height: 8px; width: 50%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+            <div style="height: 5px; width: 30%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div style="height: 6px; width: 90%; background: rgba(255,255,255,0.05); border-radius: 4px; margin-top: 6px;"></div>
+        <div style="height: 6px; width: 60%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Tech Chips -->
+  <div class="intro-floating-chips">
+    <div class="tech-chip flutter">
+      <svg viewBox="0 0 24 24" width="12" height="12"><path fill="#02569B" d="M14.3 2.3L5 11.6l4.7 4.7 9.3-9.3z"/><path fill="#0175C2" d="M9.7 16.3L5 11.6l4.7-4.7 9.3 9.3z"/><path fill="#13B9FD" d="M14.3 16.3l-4.6-4.7-4.7 4.7 9.3 9.3z"/></svg>
+      <span>Flutter</span>
+    </div>
+    <div class="tech-chip firebase">
+      <svg viewBox="0 0 24 24" width="12" height="12"><path fill="#FFCA28" d="M3.9 17.6l2.1-13.3c.1-.5.5-.8 1-.7.2 0 .4.1.5.3l3.2 5.9-6.8 7.8z"/><path fill="#F57C00" d="M13.4 9.1l-2.6-5c-.3-.5-.8-.7-1.3-.4-.2.1-.3.3-.4.5L7.2 9.8l6.2-.7z"/><path fill="#C62828" d="M20.1 16.4l-3-5.7-3.7-1.6-6.2.7 6.3 7.8c.4.5 1.1.7 1.7.4.4-.2.6-.5.7-.9l4.2-.7z"/></svg>
+      <span>Firebase</span>
+    </div>
+    <div class="tech-chip nodejs">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#68A063" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
+      <span>Node.js</span>
+    </div>
+    <div class="tech-chip mongodb">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#47A248" stroke-width="2"><path d="M12 2c0 0-6 3.5-6 10s6 10 6 10 6-3.5 6-10-6-10-6-10z"/></svg>
+      <span>MongoDB</span>
+    </div>
+    <div class="tech-chip react">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#61DAFB" stroke-width="2"><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>
+      <span>React</span>
+    </div>
+    <div class="tech-chip restapi">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#E0E0E0" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span>REST API</span>
+    </div>
+  </div>
+
+  <div class="intro-content">
+    <div class="intro-title-wrap">
+      <h1 class="intro-title">Mahadev Biniraj</h1>
+    </div>
+    <span class="intro-subtitle" id="intro-typing-text"></span>
+    <button class="intro-btn" id="intro-enter-btn" onclick="exitIntro()">Enter Experience</button>
+  </div>
+</div>
 
 <!-- ── PARTICLE CANVAS ── -->
 <div class="aurora-wrap">
@@ -1048,7 +1461,7 @@ nav.solid{
   <div class="numbers-inner">
     <div class="num-cell rv"><div class="num-big">5+</div><div class="num-sub">Production Apps</div></div>
     <div class="num-cell rv"><div class="num-big">3</div><div class="num-sub">Industry Roles</div></div>
-    <div class="num-cell rv"><div class="num-big">7.23</div><div class="num-sub">B.Tech CGPA</div></div>
+    <div class="num-cell rv"><div class="num-big">99.9%</div><div class="num-sub">Crash-Free Rate</div></div>
     <div class="num-cell rv"><div class="num-big">100%</div><div class="num-sub">Clean Architecture</div></div>
   </div>
 </div>
@@ -1266,35 +1679,56 @@ nav.solid{
         <div class="tl-item rv">
           <div class="tl-dot"></div>
           <span class="tl-yr">Mar 2026 – Present</span>
-          <div class="tl-role">Flutter Developer</div>
-          <div class="tl-co">Portfolio Builders & Portfolix Tech</div>
+          <h3 class="tl-role">Flutter Developer</h3>
+          <span class="tl-co">Portfolio Builders & Portfolix Tech</span>
           <ul class="tl-pts">
             <li>Developing scalable cross-platform mobile applications using Flutter and Dart following MVVM architecture principles.</li>
             <li>Implementing REST API integrations, reusable UI components, and Provider state management for production-ready applications.</li>
             <li>Collaborating with development teams to deliver responsive, high-performance applications with clean and maintainable code.</li>
           </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">Flutter</span>
+            <span class="tl-tag">Dart</span>
+            <span class="tl-tag">MVVM</span>
+            <span class="tl-tag">Provider</span>
+            <span class="tl-tag">REST APIs</span>
+          </div>
         </div>
         <div class="tl-item rv">
           <div class="tl-dot"></div>
           <span class="tl-yr">Nov 2025 – Jan 2026</span>
-          <div class="tl-role">Flutter Developer (Intern)</div>
-          <div class="tl-co">Techmindz · Kochi, Kerala</div>
+          <h3 class="tl-role">Flutter Developer (Intern)</h3>
+          <span class="tl-co">Techmindz · Kochi, Kerala</span>
           <ul class="tl-pts">
             <li>Developed responsive mobile applications using Flutter, Firebase, REST APIs, and Provider state management.</li>
             <li>Assisted in debugging, testing, and improving application performance and UI responsiveness.</li>
             <li>Participated in feature implementation and collaborated with team members in agile development workflows.</li>
           </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">Flutter</span>
+            <span class="tl-tag">Dart</span>
+            <span class="tl-tag">Firebase</span>
+            <span class="tl-tag">Provider</span>
+            <span class="tl-tag">REST APIs</span>
+            <span class="tl-tag">Git</span>
+          </div>
         </div>
         <div class="tl-item rv">
           <div class="tl-dot"></div>
           <span class="tl-yr">Mar 2025 – Jul 2025</span>
-          <div class="tl-role">Technical Consultant - ERP (Odoo)</div>
-          <div class="tl-co">Oscilix</div>
+          <h3 class="tl-role">Technical Consultant - ERP (Odoo)</h3>
+          <span class="tl-co">Oscilix</span>
           <ul class="tl-pts">
             <li>Customized ERP modules and supported workflow automation processes using Odoo.</li>
             <li>Assisted in User Acceptance Testing (UAT), requirement analysis, and business process improvements.</li>
             <li>Worked closely with teams to streamline operational workflows and improve system efficiency.</li>
           </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">Odoo ERP</span>
+            <span class="tl-tag">UAT Testing</span>
+            <span class="tl-tag">Automation</span>
+            <span class="tl-tag">Requirement Analysis</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1303,35 +1737,35 @@ nav.solid{
     <div class="rvr">
       <div class="eyebrow" style="margin-bottom:1.5rem">Education</div>
       <div class="edu-card rv">
-        <div class="edu-yr">2019 – 2023</div>
-        <div class="edu-deg">B.Tech — Computer Science & Engineering</div>
-        <div class="edu-sch">St. Thomas College of Engineering and Technology<br>APJ Abdul Kalam Technological University, Kerala</div>
-        <div class="edu-grd">CGPA 7.23 · First Class</div>
+        <span class="edu-yr">2019 – 2023</span>
+        <h3 class="edu-deg">B.Tech — Computer Science & Engineering</h3>
+        <p class="edu-sch">St. Thomas College of Engineering and Technology<br>APJ Abdul Kalam Technological University, Kerala</p>
+        <div class="edu-grd">First Class</div>
       </div>
       <div class="eyebrow" style="margin-top:2.5rem;margin-bottom:1.2rem">Certifications</div>
       <div class="cert-row">
         <div class="cert-card rv">
-          <div class="cert-icon">🎓</div>
+          <div class="cert-icon-wrapper">🎓</div>
           <div>
-            <div class="cert-n">Flutter App Development</div>
+            <h4 class="cert-n">Flutter App Development</h4>
             <div class="cert-iss">Luminar Technolab · 2024</div>
-            <div class="cert-bd">Intensive professional training focusing on production-ready app development.</div>
+            <p class="cert-bd">Intensive professional training focusing on production-ready app development.</p>
           </div>
         </div>
         <div class="cert-card rv">
-          <div class="cert-icon">🏆</div>
+          <div class="cert-icon-wrapper">🏆</div>
           <div>
-            <div class="cert-n">NACTET Certification</div>
+            <h4 class="cert-n">NACTET Certification</h4>
             <div class="cert-iss">Android & Flutter Development</div>
-            <div class="cert-bd">National Council for Technology and Training verified credential.</div>
+            <p class="cert-bd">National Council for Technology and Training verified credential.</p>
           </div>
         </div>
         <div class="cert-card rv" style="grid-column: span 2">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon-wrapper">📜</div>
           <div>
-            <div class="cert-n">Vocational HSS Skill Certificate</div>
+            <h4 class="cert-n">Vocational HSS Skill Certificate</h4>
             <div class="cert-iss">OOP, Databases, Web & Networking</div>
-            <div class="cert-bd">Foundational certification in core computing and software engineering principles.</div>
+            <p class="cert-bd">Foundational certification in core computing and software engineering principles.</p>
           </div>
         </div>
       </div>
@@ -1661,6 +2095,87 @@ document.querySelectorAll('.proj-card,.svc-card').forEach(card=>{
   });
   card.addEventListener('mouseleave',()=>{card.style.transform=''});
 });
+
+/* ════════════════════════════════════════
+   PREMIUM CINEMATIC INTRO SCRIPTS
+════════════════════════════════════════ */
+/* ── INTRO TYPEWRITER ── */
+(function(){
+  const target = document.getElementById('intro-typing-text');
+  if(!target) return;
+  const text = 'FULL STACK FLUTTER DEVELOPER';
+  let index = 0;
+  
+  function type() {
+    if(index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 85);
+    }
+  }
+  setTimeout(type, 1600);
+})();
+
+/* ── INTRO CANVASES & PARTICLES ── */
+(function(){
+  const c = document.getElementById('intro-particles-canvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  let W, H, pts = [];
+
+  function init(){
+    W = c.width = window.innerWidth;
+    H = c.height = window.innerHeight;
+    pts = [];
+    const n = Math.min(Math.floor((W*H)/25000), 50);
+    for(let i=0;i<n;i++){
+      pts.push({
+        x: Math.random()*W,
+        y: Math.random()*H,
+        vx: (Math.random()-.5)*0.3,
+        vy: (Math.random()-.5)*0.3,
+        r: Math.random()*1.8 + 0.5,
+        a: Math.random()*0.3 + 0.1,
+        hue: Math.random() > 0.5 ? 180 : 270
+      });
+    }
+  }
+
+  function draw(){
+    if(!document.getElementById('intro-screen') || document.getElementById('intro-screen').classList.contains('fade-out')) return;
+    ctx.clearRect(0,0,W,H);
+    for(let i=0;i<pts.length;i++){
+      ctx.beginPath();
+      ctx.arc(pts[i].x,pts[i].y,pts[i].r,0,Math.PI*2);
+      ctx.fillStyle = `hsla(${pts[i].hue}, 100%, 70%, ${pts[i].a})`;
+      ctx.fill();
+      
+      pts[i].x += pts[i].vx;
+      pts[i].y += pts[i].vy;
+      if(pts[i].x<0||pts[i].x>W) pts[i].vx *= -1;
+      if(pts[i].y<0||pts[i].y>H) pts[i].vy *= -1;
+    }
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', init);
+  init(); draw();
+})();
+
+/* ── EXIT INTRO ── */
+function exitIntro() {
+  const intro = document.getElementById('intro-screen');
+  if (intro && !intro.classList.contains('fade-out')) {
+    intro.classList.add('fade-out');
+    document.body.classList.remove('intro-active');
+    setTimeout(() => {
+      intro.remove();
+    }, 1200);
+  }
+}
+
+// Auto transition after 7.5 seconds
+setTimeout(exitIntro, 7500);
 </script>
 </body>
 </html>
