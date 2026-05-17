@@ -1209,7 +1209,7 @@ nav.solid{
     <!-- ── PORTFOLIO BUILDERS WEB ── -->
     <div class="proj-card rv">
       <div class="proj-vis">
-        <canvas id="c-pb" class="proj-vis-canvas"></canvas>
+        <img src="portfoliowebsite.png" alt="Portfolio Builders Website" class="proj-vis-canvas" style="object-fit: cover;">
         <div class="proj-cover">
           <a href="#" class="pb pb-o">Live Platform</a>
         </div>
@@ -1217,15 +1217,15 @@ nav.solid{
       <div class="proj-inf">
         <span class="proj-cat">Web Platform</span>
         <h3 class="proj-title">Portfolio Builders Website</h3>
-        <p class="proj-desc">A free-course learning platform featuring a roadmap-based learning system, tutorial video access, and assignment tracking with a focus on responsive web performance.</p>
-        <div class="proj-stack"><span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">LMS</span><span class="chip">API</span></div>
+        <p class="proj-desc">A premium free-course educational hub and learning management platform. Features a structured, roadmap-based course directory, step-by-step video lessons, and native project assignment tracking.</p>
+        <div class="proj-stack"><span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">LMS</span><span class="chip">UI/UX Design</span></div>
       </div>
     </div>
 
     <!-- ── NOTE TAKING APP ── -->
     <div class="proj-card wide rv" style="flex-direction:row-reverse">
       <div class="proj-vis">
-        <canvas id="c-notes" class="proj-vis-canvas"></canvas>
+        <img src="NoteApp.png" alt="Note-Taking Application" class="proj-vis-canvas" style="object-fit: cover;">
         <div class="proj-cover">
           <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
         </div>
@@ -1233,14 +1233,14 @@ nav.solid{
       <div class="proj-inf">
         <span class="proj-cat">Productivity Tool</span>
         <h3 class="proj-title">Note-Taking Application</h3>
-        <p class="proj-desc">A cross-platform productivity tool featuring full CRUD operations for notes. Optimized for performance with Hive local storage and a lightning-fast responsive UI.</p>
+        <p class="proj-desc">A full-stack, responsive note-taking application designed for high productivity. Features secure note creation and editing, folder-based organization, custom tag filters, real-time search, and cloud database sync.</p>
         <div class="cs-grid">
-          <div><span class="cs-label">Core</span><span class="cs-val">Fast note creation, editing, and deletion</span></div>
-          <div><span class="cs-label">Storage</span><span class="cs-val">Hive & Shared Preferences persistence</span></div>
-          <div><span class="cs-label">UI</span><span class="cs-val">Optimized search and fluid animations</span></div>
+          <div><span class="cs-label">Core</span><span class="cs-val">Folder and tag classification + swift search filter</span></div>
+          <div><span class="cs-label">Storage</span><span class="cs-val">Node.js and MongoDB backend with live cloud synchronization</span></div>
+          <div><span class="cs-label">UI</span><span class="cs-val">Highly interactive dashboard built using React components</span></div>
         </div>
         <div class="proj-stack" style="margin-top:1.5rem">
-          <span class="chip">Flutter</span><span class="chip">Hive</span><span class="chip">SharedPrefs</span><span class="chip">CRUD</span>
+          <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">REST API</span>
         </div>
       </div>
     </div>
@@ -1619,8 +1619,8 @@ function drawCanvas(id, hue, label){
 
 // drawCanvas('c-lms', 160, '// gtech-lms — rest api + jwt');
 // drawCanvas('c-ecom', 160, '// ecommerce — rest api + provider');
-drawCanvas('c-pb', 185, '// portfolio-builders — lms + roadmaps');
-drawCanvas('c-notes', 240, '// note-taking — hive + local-storage');
+// drawCanvas('c-pb', 185, '// portfolio-builders — lms + roadmaps');
+// drawCanvas('c-notes', 240, '// note-taking — hive + local-storage');
 
 /* ── FORM ── */
 function sendMsg(btn){
