@@ -19,11 +19,11 @@
   --bg2:#0f172a;
   --bg3:#1e293b;
   --surface:rgba(255,255,255,0.02);
-  --g:#10b981;
-  --g-cyan:#34d399;
-  --g-purple:#6366f1;
-  --gd:rgba(16,185,129,.12);
-  --gd2:rgba(16,185,129,.06);
+  --g:#06b6d4;
+  --g-cyan:#22d3ee;
+  --g-purple:#7c3aed;
+  --gd:rgba(6,182,212,.12);
+  --gd2:rgba(6,182,212,.06);
   --gdline:rgba(255,255,255,.1);
   --txt:#f8fafc;
   --txt2:#cbd5e1;
@@ -45,10 +45,10 @@ a{text-decoration:none;color:inherit}
    CURSOR
 ════════════════════════════════════════ */
 #cur{position:fixed;top:0;left:0;z-index:9998;pointer-events:none;mix-blend-mode:screen}
-#cur-dot{position:absolute;width:8px;height:8px;background:#fff;border-radius:50%;transform:translate(-50%,-50%);transition:width .15s,height .15s;box-shadow:0 0 10px #10b981}
+#cur-dot{position:absolute;width:8px;height:8px;background:#fff;border-radius:50%;transform:translate(-50%,-50%);transition:width .15s,height .15s;box-shadow:0 0 10px #06b6d4}
 #cur-ring{position:fixed;top:0;left:0;z-index:9997;pointer-events:none;width:40px;height:40px;border:1.5px solid rgba(255,255,255,.2);border-radius:50%;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s,opacity .3s}
 body.link-hover #cur-dot{width:14px;height:14px}
-body.link-hover #cur-ring{width:60px;height:60px;border-color:rgba(16,185,129,.4)}
+body.link-hover #cur-ring{width:60px;height:60px;border-color:rgba(6,182,212,.4)}
 
 /* ════════════════════════════════════════
    CANVAS BG — particle field
@@ -105,9 +105,9 @@ nav.solid{
   padding:.55rem 1.3rem;border-radius:3px;
   letter-spacing:.08em;text-transform:uppercase;
   transition:transform .2s,box-shadow .2s,background .2s;
-  box-shadow:0 0 24px rgba(16,185,129,.25);
+  box-shadow:0 0 24px rgba(6,182,212,.25);
 }
-.nav-hire:hover{background:#fff;transform:translateY(-2px);box-shadow:0 6px 30px rgba(16,185,129,.3)}
+.nav-hire:hover{background:#fff;transform:translateY(-2px);box-shadow:0 6px 30px rgba(6,182,212,.3)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:none}
 .hamburger span{width:22px;height:1.5px;background:var(--txt);border-radius:2px;transition:all .3s}
 .mob-nav{
@@ -142,7 +142,7 @@ nav.solid{
 /* Grid overlay */
 .hero-grid{
   position:absolute;inset:0;
-  background: radial-gradient(circle at 50% 50%, rgba(16,185,129,.05) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(6,182,212,.05) 0%, transparent 70%);
   pointer-events:none;
 }
 .hero-inner{
@@ -206,9 +206,9 @@ nav.solid{
   padding:.8rem 1.8rem;border-radius:3px;
   letter-spacing:.08em;text-transform:uppercase;
   transition:all .2s;
-  box-shadow:0 0 28px rgba(16,185,129,.22);
+  box-shadow:0 0 28px rgba(6,182,212,.22);
 }
-.btn-g:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 32px rgba(16,185,129,.28)}
+.btn-g:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 32px rgba(6,182,212,.28)}
 .btn-ghost{
   font-family:var(--mn);font-size:.78rem;font-weight:600;
   color:var(--txt2);
@@ -312,7 +312,7 @@ nav.solid{
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
   padding:.85rem 0;overflow:hidden;
-  background:linear-gradient(90deg,transparent,rgba(16,185,129,.05),transparent);
+  background:linear-gradient(90deg,transparent,rgba(6,182,212,.05),transparent);
 }
 .marquee-track{
   display:flex;width:max-content;
@@ -425,7 +425,7 @@ nav.solid{
   letter-spacing:.05em;
   transition:all .2s;
 }
-.atag:hover{background:rgba(16,185,129,.12);transform:translateY(-2px)}
+.atag:hover{background:rgba(6,182,212,.12);transform:translateY(-2px)}
 
 /* ════════════════════════════════════════
    NUMBERS BAND
@@ -447,7 +447,7 @@ nav.solid{
   transition:background .3s;
 }
 .num-cell:last-child{border-right:none}
-.num-cell:hover{background:rgba(16,185,129,.025)}
+.num-cell:hover{background:rgba(6,182,212,.025)}
 .num-cell::before{
   content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
   background:var(--g);transform:scaleX(0);transform-origin:left;
@@ -496,13 +496,13 @@ nav.solid{
 }
 .svc-card::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(16,185,129,0.08), transparent 40%);
+  background:radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(6,182,212,0.08), transparent 40%);
   z-index:1;pointer-events:none;
 }
 .svc-card:hover{
   transform:translateY(-8px) scale(1.01);
   border-color:rgba(59,130,246,0.3);
-  box-shadow:0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(16,185,129,0.1);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(6,182,212,0.1);
 }
 .svc-card.hero{grid-column:span 2;grid-row:span 2;padding:2.5rem}
 .svc-card.wide{grid-column:span 2}
@@ -588,7 +588,7 @@ nav.solid{
   position:relative;
 }
 .proj-card:hover{
-  border-color:rgba(16,185,129,.22);
+  border-color:rgba(6,182,212,.22);
   transform:translateY(-6px);
   box-shadow:0 32px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05);
 }
@@ -644,8 +644,8 @@ nav.solid{
 .cs-badge{
   display:inline-flex;align-items:center;gap:.4rem;
   font-family:var(--mn);font-size:.65rem;
-  color:var(--g);background:rgba(16,185,129,.07);
-  border:1px solid rgba(16,185,129,.18);
+  color:var(--g);background:rgba(6,182,212,.07);
+  border:1px solid rgba(6,182,212,.18);
   padding:.28rem .65rem;border-radius:3px;
   letter-spacing:.1em;text-transform:uppercase;
   margin-bottom:.6rem;
@@ -806,8 +806,8 @@ nav.solid{
 .c-item:hover{border-color:rgba(0,255,136,.18)}
 .c-ico{
   width:36px;height:36px;border-radius:7px;flex-shrink:0;
-  background:rgba(16,185,129,.07);
-  border:1px solid rgba(16,185,129,.14);
+  background:rgba(6,182,212,.07);
+  border:1px solid rgba(6,182,212,.14);
   display:flex;align-items:center;justify-content:center;font-size:.95rem;
 }
 .c-lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
@@ -820,7 +820,7 @@ nav.solid{
   font-family:var(--mn);font-size:.72rem;font-weight:600;color:var(--muted);
   transition:all .2s;
 }
-.soc:hover{color:var(--g);border-color:rgba(16,185,129,.25);background:rgba(16,185,129,.05);transform:translateY(-2px)}
+.soc:hover{color:var(--g);border-color:rgba(6,182,212,.25);background:rgba(6,182,212,.05);transform:translateY(-2px)}
 /* Form */
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
 .fg{margin-bottom:1rem}
@@ -837,8 +837,8 @@ nav.solid{
   outline:none;transition:border-color .2s,box-shadow .2s;
 }
 .fi:focus,.ft:focus{
-  border-color:rgba(16,185,129,.35);
-  box-shadow:0 0 0 3px rgba(16,185,129,.05);
+  border-color:rgba(6,182,212,.35);
+  box-shadow:0 0 0 3px rgba(6,182,212,.05);
 }
 .ft{min-height:130px;resize:vertical}
 .f-submit{
@@ -1277,18 +1277,20 @@ body.intro-active {
   <a href="#skills" onclick="mobToggle()">Skills</a>
   <a href="#work" onclick="mobToggle()">Work</a>
   <a href="#experience" onclick="mobToggle()">Experience</a>
+  <a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank" onclick="mobToggle()">Resume</a>
   <a href="#contact" onclick="mobToggle()">Contact</a>
 </div>
 
 <!-- ── NAV ── -->
 <nav id="nav">
-  <a href="#" class="nav-logo">MB<span>.</span></a>
+  <a href="#" class="nav-logo">MAHADEV<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:mahadevbiniraj6@gmail.com" class="nav-hire">Hire Me</a>
@@ -1828,7 +1830,7 @@ body.intro-active {
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-logo">MB<span>.</span></div>
+    <div class="footer-logo">MAHADEV<span>.</span></div>
     <div class="footer-txt">© 2026 Mahadev Biniraj · <a href="https://github.com/MahadevBiniraj" target="_blank">GitHub</a></div>
     <div class="footer-mono">Flutter Full Stack Developer</div>
   </div>
@@ -1869,7 +1871,7 @@ body.intro-active {
           ctx.beginPath();
           ctx.moveTo(pts[i].x,pts[i].y);
           ctx.lineTo(pts[j].x,pts[j].y);
-          ctx.strokeStyle=`rgba(16,185,129,${.1*(1-d/120)})`;
+          ctx.strokeStyle=`rgba(6,182,212,${.1*(1-d/120)})`;
           ctx.lineWidth=.5;
           ctx.stroke();
         }
@@ -1881,7 +1883,7 @@ body.intro-active {
         ctx.beginPath();
         ctx.moveTo(pts[i].x,pts[i].y);
         ctx.lineTo(mouse.x,mouse.y);
-        ctx.strokeStyle=`rgba(16,185,129,${.2*(1-md/180)})`;
+        ctx.strokeStyle=`rgba(6,182,212,${.2*(1-md/180)})`;
         ctx.lineWidth=.6;
         ctx.stroke();
       }
