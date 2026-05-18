@@ -168,7 +168,7 @@ nav.solid{
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
 .hero-name{
   font-family:var(--hd);
-  font-size:clamp(4.5rem,9vw,8.5rem);
+  font-size:clamp(2.5rem,9vw,8.5rem);
   line-height:.95;letter-spacing:.02em;
   margin-bottom:.8rem;
   animation:up .6s .08s ease both;
@@ -347,7 +347,7 @@ nav.solid{
 .eyebrow::before{content:'';width:28px;height:1px;background:var(--g);opacity:.5}
 .sec-title{
   font-family:var(--hd);
-  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-size:clamp(2.1rem,5vw,4.5rem);
   line-height:.95;letter-spacing:.02em;
   color:var(--txt);margin-bottom:.6rem;
 }
@@ -593,6 +593,7 @@ nav.solid{
   box-shadow:0 32px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05);
 }
 .proj-card.wide{grid-column:span 2;flex-direction:row}
+.proj-card.wide.rev{grid-column:span 2;flex-direction:row-reverse}
 .proj-card.wide .proj-vis{flex:1}
 .proj-card.wide .proj-inf{flex:1;padding:3rem}
 .proj-vis{
@@ -874,31 +875,86 @@ nav.solid{
    RESPONSIVE
 ════════════════════════════════════════ */
 @media(max-width:1100px){
-  .hero-inner{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr; gap: 3rem;}
   .hero-right{display:none}
-  .about-grid{grid-template-columns:1fr}
-  .about-img-outer{max-width:360px}
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .svc-card:nth-child(3n){border-right:1px solid var(--border)}
-  .svc-card:nth-child(2n){border-right:none}
+  .about-grid{grid-template-columns:1fr; gap: 3rem;}
+  .about-img-outer{max-width:360px; margin: 0 auto; padding-right: 16px;}
   .proj-grid{grid-template-columns:1fr}
-  .proj-card.wide{flex-direction:column}
-  .proj-card.wide .proj-vis{aspect-ratio:16/9}
-  .exp-wrap{grid-template-columns:1fr}
-  .contact-wrap{grid-template-columns:1fr}
-  .skills-wrap{grid-template-columns:1fr}
+  .proj-card.wide, .proj-card.wide.rev{flex-direction:column}
+  .proj-card.wide .proj-vis, .proj-card.wide.rev .proj-vis{aspect-ratio:16/9; width:100%}
+  .proj-card.wide .proj-inf, .proj-card.wide.rev .proj-inf{padding:2rem}
+  .exp-wrap{grid-template-columns:1fr; gap: 3rem;}
+  .contact-wrap{grid-template-columns:1fr; gap: 3rem;}
+  .skills-wrap{grid-template-columns:1fr; gap: 3rem;}
   .numbers-inner{grid-template-columns:1fr 1fr}
+  .num-cell{padding: 2rem 1rem;}
   .num-cell:nth-child(2){border-right:none}
+  .cs-grid{grid-template-columns:1fr 1fr; gap: 1rem;}
 }
 @media(max-width:768px){
+  nav { padding: 1rem 5% !important; }
+  nav.solid { padding: 0.8rem 5% !important; }
   .nav-links,.nav-hire{display:none}
   .hamburger{display:flex}
-  .svc-grid{grid-template-columns:1fr}
-  .svc-card{border-right:none !important}
+  .hero-scroll{display:none !important}
+  .hero-stats{gap: 1.5rem; justify-content: space-between;}
+  .hstat-num{font-size: 2.2rem;}
   .form-row{grid-template-columns:1fr}
   .cert-row{grid-template-columns:1fr}
-  .cs-grid{grid-template-columns:1fr;gap:.5rem}
-  .numbers-inner{grid-template-columns:1fr 1fr}
+  .cert-card{grid-column: span 1 !important;}
+  .cs-grid{grid-template-columns:1fr;gap:.8rem}
+  .about-quote{font-size: 1.5rem; padding-left: 1rem;}
+  
+  .mob-nav {
+    z-index: 1000 !important;
+  }
+  .mob-nav a {
+    font-size: clamp(2rem, 8vh, 3rem) !important;
+  }
+  .mob-close {
+    top: 1.2rem;
+    right: 5%;
+    font-size: 2rem;
+  }
+  
+  .section { padding: 4.5rem 5% !important; }
+  .tl-item { padding: 1.5rem !important; }
+  .timeline { padding-left: 1.8rem !important; }
+  .tl-dot { left: -1.8rem !important; }
+  .edu-card, .cert-card { padding: 1.5rem !important; }
+  
+  .svc-card { padding: 1.2rem !important; }
+  .svc-card.hero { padding: 1.8rem !important; }
+  .svc-card.hero .svc-name { font-size: 2rem !important; }
+  
+  .intro-cards { display: none !important; }
+  .intro-title { font-size: clamp(2rem, 8vw, 4.5rem) !important; }
+  .intro-subtitle { 
+    font-size: 0.72rem !important; 
+    letter-spacing: 0.15em !important; 
+    display: block !important;
+  }
+  .tech-chip {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.65rem !important;
+  }
+  .tech-chip.react { left: 4% !important; top: 38% !important; }
+  .tech-chip.restapi { right: 4% !important; top: 38% !important; }
+  .tech-chip.flutter { left: 8% !important; top: 18% !important; }
+  .tech-chip.nodejs { right: 8% !important; top: 18% !important; }
+  .tech-chip.firebase { left: 8% !important; top: 78% !important; }
+  .tech-chip.mongodb { right: 8% !important; top: 78% !important; }
+}
+@media(max-width:480px){
+  .numbers-inner{grid-template-columns:1fr !important}
+  .num-cell{
+    border-right:none !important; 
+    border-bottom:1px solid var(--border);
+    padding: 1.8rem 1rem !important;
+  }
+  .num-cell:last-child{border-bottom:none}
+  .hero-btns { flex-direction: column; width: 100%; gap: 0.8rem; }
+  .hero-btns a { text-align: center; width: 100%; }
 }
 
 /* ════════════════════════════════════════
@@ -1638,7 +1694,7 @@ body.intro-active {
     </div>
 
     <!-- ── NOTE TAKING APP ── -->
-    <div class="proj-card wide rv" style="flex-direction:row-reverse">
+    <div class="proj-card wide rev rv">
       <div class="proj-vis">
         <img src="NoteApp.png" alt="Note-Taking Application" class="proj-vis-canvas" style="object-fit: cover;">
         <div class="proj-cover">
