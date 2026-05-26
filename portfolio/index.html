@@ -438,7 +438,7 @@ nav.solid{
 }
 .numbers-inner{
   max-width:1280px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
 }
 .num-cell{
   padding:3rem 2rem;
@@ -1519,7 +1519,6 @@ body.intro-active {
   <div class="numbers-inner">
     <div class="num-cell rv"><div class="num-big">5+</div><div class="num-sub">Production Apps</div></div>
     <div class="num-cell rv"><div class="num-big">3</div><div class="num-sub">Industry Roles</div></div>
-    <div class="num-cell rv"><div class="num-big">99.9%</div><div class="num-sub">Crash-Free Rate</div></div>
     <div class="num-cell rv"><div class="num-big">100%</div><div class="num-sub">Clean Architecture</div></div>
   </div>
 </div>
@@ -1872,11 +1871,11 @@ body.intro-active {
     </div>
     <div class="rvr">
       <div class="form-row">
-        <div class="fg"><label class="fl">Your Name</label><input class="fi" type="text"/></div>
-        <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email"/></div>
+        <div class="fg"><label class="fl">Your Name</label><input id="contact-name" class="fi" type="text"/></div>
+        <div class="fg"><label class="fl">Email Address</label><input id="contact-email" class="fi" type="email"/></div>
       </div>
-      <div class="fg"><label class="fl">Subject</label><input class="fi" type="text"/></div>
-      <div class="fg"><label class="fl">Message</label><textarea class="ft"></textarea></div>
+      <div class="fg"><label class="fl">Subject</label><input id="contact-subject" class="fi" type="text"/></div>
+      <div class="fg"><label class="fl">Message</label><textarea id="contact-message" class="ft"></textarea></div>
       <button class="f-submit" onclick="sendMsg(this)">Send Message →</button>
     </div>
   </div>
@@ -2122,11 +2121,56 @@ function drawCanvas(id, hue, label){
 
 /* ── FORM ── */
 function sendMsg(btn){
-  btn.textContent='Message Sent ✓';
-  btn.style.background='rgba(0,255,136,.15)';
-  btn.style.color='var(--g)';
-  btn.style.border='1px solid rgba(0,255,136,.3)';
-  setTimeout(()=>{btn.textContent='Send Message →';btn.removeAttribute('style')},3000);
+  const name = document.getElementById('contact-name').value;
+  const email = document.getElementById('contact-email').value;
+  const subject = document.getElementById('contact-subject').value;
+  const message = document.getElementById('contact-message').value;
+
+  if(!name || !email || !message) {
+    alert("Please fill all required fields (Name, Email, Message).");
+    return;
+  }
+
+  const prevText = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.style.pointerEvents = 'none';
+
+  fetch("https://formsubmit.co/ajax/mahadevbiniraj6@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    btn.textContent='Message Sent ✓';
+    btn.style.background='rgba(0,255,136,.15)';
+    btn.style.color='var(--g)';
+    btn.style.border='1px solid rgba(0,255,136,.3)';
+    
+    document.getElementById('contact-name').value = '';
+    document.getElementById('contact-email').value = '';
+    document.getElementById('contact-subject').value = '';
+    document.getElementById('contact-message').value = '';
+
+    setTimeout(()=>{
+      btn.textContent='Send Message →';
+      btn.removeAttribute('style');
+    }, 3000);
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Error sending message.");
+    btn.textContent = prevText;
+    btn.removeAttribute('style');
+  });
 }
 
 /* ── BENTO MOUSE TRACK ── */
