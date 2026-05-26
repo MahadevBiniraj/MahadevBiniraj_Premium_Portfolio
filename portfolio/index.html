@@ -1,1096 +1,1275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Mahadev Biniraj — Flutter Developer</title>
-<meta name="description" content="Flutter Full Stack Developer. Clean architecture. Pixel-perfect UI. Production-grade apps."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Mahadev Biniraj — Flutter Developer</title>
+  <meta name="description"
+    content="Flutter Full Stack Developer. Clean architecture. Pixel-perfect UI. Production-grade apps." />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:title" content="Mahadev Biniraj Portfolio" />
+  <meta property="og:description"
+    content="Flutter Developer Portfolio showcasing mobile apps, dashboard UI designs, and projects." />
+  <meta property="og:image" content="https://mahadevbiniraj.in/social-preview.jpg" />
+  <meta property="og:url" content="https://mahadevbiniraj.in" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://mahadevbiniraj.in/social-preview.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="intro-active">
 
-<!-- ── PREMIUM CINEMATIC INTRO SCREEN ── -->
-<div id="intro-screen">
-  <div class="intro-glow-cyan"></div>
-  <div class="intro-glow-purple"></div>
-  <div class="intro-grid"></div>
-  
-  <canvas class="intro-particles" id="intro-particles-canvas"></canvas>
+  <!-- ── PREMIUM CINEMATIC INTRO SCREEN ── -->
+  <div id="intro-screen">
+    <div class="intro-glow-cyan"></div>
+    <div class="intro-glow-purple"></div>
+    <div class="intro-grid"></div>
 
-  <!-- Sleek 3D Mockup Cards Floating in Background/Side Space -->
-  <div class="intro-cards">
-    <div class="intro-card left">
-      <div class="intro-card-dots">
-        <div class="intro-card-dot" style="background:#ff5f57"></div>
-        <div class="intro-card-dot" style="background:#febc2e"></div>
-        <div class="intro-card-dot" style="background:#28c840"></div>
-      </div>
-      <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
-        <div style="height: 10px; width: 40%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
-        <div style="height: 6px; width: 85%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
-        <div style="height: 6px; width: 70%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
-        <div style="height: 35px; width: 100%; background: rgba(6,182,212,0.08); border-top: 1px solid rgba(6,182,212,0.15); border-radius: 6px; margin-top: 8px;"></div>
-      </div>
-    </div>
-    <div class="intro-card right">
-      <div class="intro-card-dots">
-        <div class="intro-card-dot" style="background:#ff5f57"></div>
-        <div class="intro-card-dot" style="background:#febc2e"></div>
-        <div class="intro-card-dot" style="background:#28c840"></div>
-      </div>
-      <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
-        <div style="display: flex; gap: 8px;">
-          <div style="width: 28px; height: 28px; border-radius: 6px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.25);"></div>
-          <div style="flex:1; display:flex; flex-direction:column; gap:4px; justify-content:center;">
-            <div style="height: 8px; width: 50%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
-            <div style="height: 5px; width: 30%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+    <canvas class="intro-particles" id="intro-particles-canvas"></canvas>
+
+    <!-- Sleek 3D Mockup Cards Floating in Background/Side Space -->
+    <div class="intro-cards">
+      <div class="intro-card left">
+        <div class="intro-card-dots">
+          <div class="intro-card-dot" style="background:#ff5f57"></div>
+          <div class="intro-card-dot" style="background:#febc2e"></div>
+          <div class="intro-card-dot" style="background:#28c840"></div>
+        </div>
+        <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="height: 10px; width: 40%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+          <div style="height: 6px; width: 85%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+          <div style="height: 6px; width: 70%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+          <div
+            style="height: 35px; width: 100%; background: rgba(6,182,212,0.08); border-top: 1px solid rgba(6,182,212,0.15); border-radius: 6px; margin-top: 8px;">
           </div>
         </div>
-        <div style="height: 6px; width: 90%; background: rgba(255,255,255,0.05); border-radius: 4px; margin-top: 6px;"></div>
-        <div style="height: 6px; width: 60%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+      </div>
+      <div class="intro-card right">
+        <div class="intro-card-dots">
+          <div class="intro-card-dot" style="background:#ff5f57"></div>
+          <div class="intro-card-dot" style="background:#febc2e"></div>
+          <div class="intro-card-dot" style="background:#28c840"></div>
+        </div>
+        <div style="padding: 36px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; gap: 8px;">
+            <div
+              style="width: 28px; height: 28px; border-radius: 6px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.25);">
+            </div>
+            <div style="flex:1; display:flex; flex-direction:column; gap:4px; justify-content:center;">
+              <div style="height: 8px; width: 50%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+              <div style="height: 5px; width: 30%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+            </div>
+          </div>
+          <div
+            style="height: 6px; width: 90%; background: rgba(255,255,255,0.05); border-radius: 4px; margin-top: 6px;">
+          </div>
+          <div style="height: 6px; width: 60%; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+        </div>
       </div>
     </div>
+
+    <!-- Floating Tech Chips -->
+    <div class="intro-floating-chips">
+      <div class="tech-chip flutter">
+        <svg viewBox="0 0 24 24" width="12" height="12">
+          <path fill="#02569B" d="M14.3 2.3L5 11.6l4.7 4.7 9.3-9.3z" />
+          <path fill="#0175C2" d="M9.7 16.3L5 11.6l4.7-4.7 9.3 9.3z" />
+          <path fill="#13B9FD" d="M14.3 16.3l-4.6-4.7-4.7 4.7 9.3 9.3z" />
+        </svg>
+        <span>Flutter</span>
+      </div>
+      <div class="tech-chip firebase">
+        <svg viewBox="0 0 24 24" width="12" height="12">
+          <path fill="#FFCA28" d="M3.9 17.6l2.1-13.3c.1-.5.5-.8 1-.7.2 0 .4.1.5.3l3.2 5.9-6.8 7.8z" />
+          <path fill="#F57C00" d="M13.4 9.1l-2.6-5c-.3-.5-.8-.7-1.3-.4-.2.1-.3.3-.4.5L7.2 9.8l6.2-.7z" />
+          <path fill="#C62828" d="M20.1 16.4l-3-5.7-3.7-1.6-6.2.7 6.3 7.8c.4.5 1.1.7 1.7.4.4-.2.6-.5.7-.9l4.2-.7z" />
+        </svg>
+        <span>Firebase</span>
+      </div>
+      <div class="tech-chip nodejs">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#68A063" stroke-width="2">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
+        </svg>
+        <span>Node.js</span>
+      </div>
+      <div class="tech-chip mongodb">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#47A248" stroke-width="2">
+          <path d="M12 2c0 0-6 3.5-6 10s6 10 6 10 6-3.5 6-10-6-10-6-10z" />
+        </svg>
+        <span>MongoDB</span>
+      </div>
+      <div class="tech-chip react">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#61DAFB" stroke-width="2">
+          <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(30 12 12)" />
+          <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(90 12 12)" />
+          <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(150 12 12)" />
+          <circle cx="12" cy="12" r="2" fill="#61DAFB" />
+        </svg>
+        <span>React</span>
+      </div>
+      <div class="tech-chip restapi">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#E0E0E0" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <span>REST API</span>
+      </div>
+    </div>
+
+    <div class="intro-content">
+      <div class="intro-title-wrap">
+        <h1 class="intro-title">Mahadev Biniraj</h1>
+      </div>
+      <span class="intro-subtitle" id="intro-typing-text"></span>
+      <button class="intro-btn" id="intro-enter-btn" onclick="exitIntro()">Enter Experience</button>
+    </div>
   </div>
 
-  <!-- Floating Tech Chips -->
-  <div class="intro-floating-chips">
-    <div class="tech-chip flutter">
-      <svg viewBox="0 0 24 24" width="12" height="12"><path fill="#02569B" d="M14.3 2.3L5 11.6l4.7 4.7 9.3-9.3z"/><path fill="#0175C2" d="M9.7 16.3L5 11.6l4.7-4.7 9.3 9.3z"/><path fill="#13B9FD" d="M14.3 16.3l-4.6-4.7-4.7 4.7 9.3 9.3z"/></svg>
-      <span>Flutter</span>
-    </div>
-    <div class="tech-chip firebase">
-      <svg viewBox="0 0 24 24" width="12" height="12"><path fill="#FFCA28" d="M3.9 17.6l2.1-13.3c.1-.5.5-.8 1-.7.2 0 .4.1.5.3l3.2 5.9-6.8 7.8z"/><path fill="#F57C00" d="M13.4 9.1l-2.6-5c-.3-.5-.8-.7-1.3-.4-.2.1-.3.3-.4.5L7.2 9.8l6.2-.7z"/><path fill="#C62828" d="M20.1 16.4l-3-5.7-3.7-1.6-6.2.7 6.3 7.8c.4.5 1.1.7 1.7.4.4-.2.6-.5.7-.9l4.2-.7z"/></svg>
-      <span>Firebase</span>
-    </div>
-    <div class="tech-chip nodejs">
-      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#68A063" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
-      <span>Node.js</span>
-    </div>
-    <div class="tech-chip mongodb">
-      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#47A248" stroke-width="2"><path d="M12 2c0 0-6 3.5-6 10s6 10 6 10 6-3.5 6-10-6-10-6-10z"/></svg>
-      <span>MongoDB</span>
-    </div>
-    <div class="tech-chip react">
-      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#61DAFB" stroke-width="2"><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>
-      <span>React</span>
-    </div>
-    <div class="tech-chip restapi">
-      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#E0E0E0" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      <span>REST API</span>
-    </div>
+  <!-- ── PARTICLE CANVAS ── -->
+  <div class="aurora-wrap">
+    <div class="aurora-blob blob-1"></div>
+    <div class="aurora-blob blob-2"></div>
+    <div class="aurora-blob blob-3"></div>
+  </div>
+  <div class="bg-grid"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── CURSOR ── -->
+  <div id="cur">
+    <div id="cur-dot"></div>
+  </div>
+  <div id="cur-ring"></div>
+
+  <!-- ── MOBILE NAV ── -->
+  <div class="mob-nav" id="mobNav">
+    <button class="mob-close" onclick="mobToggle()">✕</button>
+    <a href="#about" onclick="mobToggle()">About</a>
+    <a href="#services" onclick="mobToggle()">Services</a>
+    <a href="#skills" onclick="mobToggle()">Skills</a>
+    <a href="#work" onclick="mobToggle()">Work</a>
+    <a href="#experience" onclick="mobToggle()">Experience</a>
+    <a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank" onclick="mobToggle()">Resume</a>
+    <a href="#contact" onclick="mobToggle()">Contact</a>
   </div>
 
-  <div class="intro-content">
-    <div class="intro-title-wrap">
-      <h1 class="intro-title">Mahadev Biniraj</h1>
-    </div>
-    <span class="intro-subtitle" id="intro-typing-text"></span>
-    <button class="intro-btn" id="intro-enter-btn" onclick="exitIntro()">Enter Experience</button>
-  </div>
-</div>
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">MAHADEV<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:mahadevbiniraj6@gmail.com" class="nav-hire">Hire Me</a>
+    <div class="hamburger" onclick="mobToggle()"><span></span><span></span><span></span></div>
+  </nav>
 
-<!-- ── PARTICLE CANVAS ── -->
-<div class="aurora-wrap">
-  <div class="aurora-blob blob-1"></div>
-  <div class="aurora-blob blob-2"></div>
-  <div class="aurora-blob blob-3"></div>
-</div>
-<div class="bg-grid"></div>
-<canvas id="bg-canvas"></canvas>
-
-<!-- ── CURSOR ── -->
-<div id="cur"><div id="cur-dot"></div></div>
-<div id="cur-ring"></div>
-
-<!-- ── MOBILE NAV ── -->
-<div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="mobToggle()">✕</button>
-  <a href="#about" onclick="mobToggle()">About</a>
-  <a href="#services" onclick="mobToggle()">Services</a>
-  <a href="#skills" onclick="mobToggle()">Skills</a>
-  <a href="#work" onclick="mobToggle()">Work</a>
-  <a href="#experience" onclick="mobToggle()">Experience</a>
-  <a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank" onclick="mobToggle()">Resume</a>
-  <a href="#contact" onclick="mobToggle()">Contact</a>
-</div>
-
-<!-- ── NAV ── -->
-<nav id="nav">
-  <a href="#" class="nav-logo">MAHADEV<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="MAHADEV_BINIRAJ_Resume.pdf" target="_blank">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="mailto:mahadevbiniraj6@gmail.com" class="nav-hire">Hire Me</a>
-  <div class="hamburger" onclick="mobToggle()"><span></span><span></span><span></span></div>
-</nav>
-
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      HERO
 ══════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-grid"></div>
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-grid"></div>
 
-  <div class="hero-inner">
-    <!-- LEFT -->
-    <div>
-      <div class="hero-availability">
-        <span class="hero-availability-dot"></span>
-        Open to Opportunities · Kerala, India
-      </div>
-
-      <h1 class="hero-name">
-        MAHA<span class="acc">DEV</span><br>
-        <span class="outline">BINIRAJ</span>
-      </h1>
-
-      <div class="hero-role-row">
-        <span class="hero-role-line"></span>
-        <span class="hero-role"><span id="typed"></span><span style="color:var(--g);animation:blink 1s infinite;display:inline-block;width:2px;height:.85em;background:var(--g);vertical-align:middle;margin-left:2px"></span></span>
-      </div>
-
-      <p class="hero-desc">
-        I craft mobile apps that perform flawlessly, look exceptional, and scale with your business — built with Flutter, Firebase, and zero compromise on quality.
-      </p>
-
-      <div class="hero-btns">
-        <a href="#work" class="btn-g">View Projects</a>
-        <a href="#contact" class="btn-ghost">Let's Talk</a>
-        <a href="https://github.com/MahadevBiniraj" target="_blank" class="btn-ghost" style="border-color:rgba(0,255,136,.15)">GitHub ↗</a>
-      </div>
-
-      <div class="hero-stats">
-        <div>
-          <div class="hstat-num">5+</div>
-          <div class="hstat-lbl">Apps Built</div>
+    <div class="hero-inner">
+      <!-- LEFT -->
+      <div>
+        <div class="hero-availability">
+          <span class="hero-availability-dot"></span>
+          Open to Opportunities · Kerala, India
         </div>
-        <div>
-          <div class="hstat-num">3</div>
-          <div class="hstat-lbl">Companies</div>
+
+        <h1 class="hero-name">
+          MAHA<span class="acc">DEV</span><br>
+          <span class="outline">BINIRAJ</span>
+        </h1>
+
+        <div class="hero-role-row">
+          <span class="hero-role-line"></span>
+          <span class="hero-role"><span id="typed"></span><span
+              style="color:var(--g);animation:blink 1s infinite;display:inline-block;width:2px;height:.85em;background:var(--g);vertical-align:middle;margin-left:2px"></span></span>
         </div>
-        <div>
-          <div class="hstat-num">95%</div>
-          <div class="hstat-lbl">Clean Code</div>
+
+        <p class="hero-desc">
+          I craft mobile apps that perform flawlessly, look exceptional, and scale with your business — built with
+          Flutter, Firebase, and zero compromise on quality.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#work" class="btn-g">View Projects</a>
+          <a href="#contact" class="btn-ghost">Let's Talk</a>
+          <a href="https://github.com/MahadevBiniraj" target="_blank" class="btn-ghost"
+            style="border-color:rgba(0,255,136,.15)">GitHub ↗</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hstat-num">5+</div>
+            <div class="hstat-lbl">Apps Built</div>
+          </div>
+          <div>
+            <div class="hstat-num">3</div>
+            <div class="hstat-lbl">Companies</div>
+          </div>
+          <div>
+            <div class="hstat-num">95%</div>
+            <div class="hstat-lbl">Clean Code</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — code card -->
+      <div class="hero-right">
+        <div class="code-card">
+          <div class="code-bar">
+            <div class="code-dot cd-r"></div>
+            <div class="code-dot cd-y"></div>
+            <div class="code-dot cd-g"></div>
+            <span class="code-fname">mahadev.dart</span>
+          </div>
+          <div class="code-body">
+            <span class="cc">// ─── Flutter Full Stack Developer ───</span><br><br>
+            <span class="ck">class</span> <span class="co">Mahadev</span> <span class="ck">extends</span> <span
+              class="co">Developer</span> {<br>
+            &nbsp;&nbsp;<span class="ck">final</span> name = <span class="cs">'Mahadev Biniraj'</span>;<br>
+            &nbsp;&nbsp;<span class="ck">final</span> location = <span class="cs">'Kerala, India'</span>;<br>
+            &nbsp;&nbsp;<span class="ck">final</span> available = <span class="cf">true</span>;<br><br>
+            &nbsp;&nbsp;<span class="ck">final</span> stack = [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'Flutter'</span>, <span class="cs">'Dart'</span>, <span
+              class="cs">'Firebase'</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'REST API'</span>, <span class="cs">'Provider'</span>,<span
+              class="cs"> 'MVVM'</span><br>
+            &nbsp;&nbsp;];<br><br>
+            &nbsp;&nbsp;<span class="cf">Widget</span> <span class="cf">build</span>(context) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="co">ProductionApp</span>(<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quality: <span class="cn">100</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onTime: <span class="cf">true</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cleanCode: <span class="cf">true</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+            &nbsp;&nbsp;}<br>
+            }<span class="cursor-blink"></span>
+          </div>
+        </div>
+        <div class="hero-chip chip-a">
+          <span class="chip-ico">🏢</span>
+          <div><span class="chip-lbl">Experience</span><span class="chip-val">Portfolio Builders · Techmindz</span>
+          </div>
+        </div>
+        <div class="hero-chip chip-b">
+          <span class="chip-ico">⚡</span>
+          <div><span class="chip-lbl">Stack</span><span class="chip-val">Flutter + Firebase</span></div>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT — code card -->
-    <div class="hero-right">
-      <div class="code-card">
-        <div class="code-bar">
-          <div class="code-dot cd-r"></div>
-          <div class="code-dot cd-y"></div>
-          <div class="code-dot cd-g"></div>
-          <span class="code-fname">mahadev.dart</span>
-        </div>
-        <div class="code-body">
-<span class="cc">// ─── Flutter Full Stack Developer ───</span><br><br>
-<span class="ck">class</span> <span class="co">Mahadev</span> <span class="ck">extends</span> <span class="co">Developer</span> {<br>
-&nbsp;&nbsp;<span class="ck">final</span> name = <span class="cs">'Mahadev Biniraj'</span>;<br>
-&nbsp;&nbsp;<span class="ck">final</span> location = <span class="cs">'Kerala, India'</span>;<br>
-&nbsp;&nbsp;<span class="ck">final</span> available = <span class="cf">true</span>;<br><br>
-&nbsp;&nbsp;<span class="ck">final</span> stack = [<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'Flutter'</span>, <span class="cs">'Dart'</span>, <span class="cs">'Firebase'</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'REST API'</span>, <span class="cs">'Provider'</span>,<span class="cs"> 'MVVM'</span><br>
-&nbsp;&nbsp;];<br><br>
-&nbsp;&nbsp;<span class="cf">Widget</span> <span class="cf">build</span>(context) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="co">ProductionApp</span>(<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quality: <span class="cn">100</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onTime: <span class="cf">true</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cleanCode: <span class="cf">true</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;);<br>
-&nbsp;&nbsp;}<br>
-}<span class="cursor-blink"></span>
-        </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
       </div>
-      <div class="hero-chip chip-a">
-        <span class="chip-ico">🏢</span>
-        <div><span class="chip-lbl">Experience</span><span class="chip-val">Portfolio Builders · Techmindz</span></div>
-      </div>
-      <div class="hero-chip chip-b">
-        <span class="chip-ico">⚡</span>
-        <div><span class="chip-lbl">Stack</span><span class="chip-val">Flutter + Firebase</span></div>
-      </div>
+      <span class="scroll-txt">scroll</span>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee">
+      <span class="marquee-item">Flutter Developer <span>✦</span></span>
+      <span class="marquee-item">Dart · Firebase · REST API <span>✦</span></span>
+      <span class="marquee-item">Mobile App Architecture <span>✦</span></span>
+      <span class="marquee-item">Provider · MVVM · MVC <span>✦</span></span>
+      <span class="marquee-item">Portfolio Builders · Techmindz <span>✦</span></span>
+      <span class="marquee-item">Clean Code · Clean UI <span>✦</span></span>
+      <span class="marquee-item">B.Tech CS · NACTET Certified <span>✦</span></span>
+      <span class="marquee-item">Available for Hire <span>✦</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Flutter Developer <span>✦</span></span>
+      <span class="marquee-item">Dart · Firebase · REST API <span>✦</span></span>
+      <span class="marquee-item">Mobile App Architecture <span>✦</span></span>
+      <span class="marquee-item">Provider · MVVM · MVC <span>✦</span></span>
+      <span class="marquee-item">Portfolio Builders · Techmindz <span>✦</span></span>
+      <span class="marquee-item">Clean Code · Clean UI <span>✦</span></span>
+      <span class="marquee-item">B.Tech CS · NACTET Certified <span>✦</span></span>
+      <span class="marquee-item">Available for Hire <span>✦</span></span>
     </div>
   </div>
 
-  <div class="hero-scroll">
-    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-    <span class="scroll-txt">scroll</span>
-  </div>
-</section>
-
-<!-- ══ MARQUEE ══ -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="marquee">
-    <span class="marquee-item">Flutter Developer <span>✦</span></span>
-    <span class="marquee-item">Dart · Firebase · REST API <span>✦</span></span>
-    <span class="marquee-item">Mobile App Architecture <span>✦</span></span>
-    <span class="marquee-item">Provider · MVVM · MVC <span>✦</span></span>
-    <span class="marquee-item">Portfolio Builders · Techmindz <span>✦</span></span>
-    <span class="marquee-item">Clean Code · Clean UI <span>✦</span></span>
-    <span class="marquee-item">B.Tech CS · NACTET Certified <span>✦</span></span>
-    <span class="marquee-item">Available for Hire <span>✦</span></span>
-    <!-- duplicate for seamless loop -->
-    <span class="marquee-item">Flutter Developer <span>✦</span></span>
-    <span class="marquee-item">Dart · Firebase · REST API <span>✦</span></span>
-    <span class="marquee-item">Mobile App Architecture <span>✦</span></span>
-    <span class="marquee-item">Provider · MVVM · MVC <span>✦</span></span>
-    <span class="marquee-item">Portfolio Builders · Techmindz <span>✦</span></span>
-    <span class="marquee-item">Clean Code · Clean UI <span>✦</span></span>
-    <span class="marquee-item">B.Tech CS · NACTET Certified <span>✦</span></span>
-    <span class="marquee-item">Available for Hire <span>✦</span></span>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      ABOUT
 ══════════════════════════════════════ -->
-<div class="section" id="about">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Who I am</div>
-    <h2 class="sec-title">TURNING<br>IDEAS INTO <em>APPS</em><br>THAT <span class="ol">MATTER</span></h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-img-outer rvl">
-      <div class="about-img-inner">
-        <div class="corner corner-tl"></div>
-        <div class="corner corner-tr"></div>
-        <div class="corner corner-bl"></div>
-        <div class="corner corner-br"></div>
-        <div class="about-scan"></div>
-        <img src="IMG_2738.jpg (1).jpeg" alt="Mahadev Biniraj"
-          onerror="this.closest('.about-img-inner').style.cssText='background:linear-gradient(135deg,#131320 0%,#08080f 100%);min-height:480px;display:flex;align-items:center;justify-content:center;';this.style.display='none'"/>
+  <div class="section" id="about">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Who I am</div>
+        <h2 class="sec-title">TURNING<br>IDEAS INTO <em>APPS</em><br>THAT <span class="ol">MATTER</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-outer rvl">
+          <div class="about-img-inner">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+            <div class="about-scan"></div>
+            <img src="IMG_2738.jpg (1).jpeg" alt="Mahadev Biniraj"
+              onerror="this.closest('.about-img-inner').style.cssText='background:linear-gradient(135deg,#131320 0%,#08080f 100%);min-height:480px;display:flex;align-items:center;justify-content:center;';this.style.display='none'" />
+          </div>
+        </div>
+        <div class="rvr">
+          <p class="about-quote">
+            I don't just write Flutter code —<br>
+            I build <span>experiences</span> that users<br>actually remember.
+          </p>
+          <p class="about-p">Flutter developer with professional experience at Portfolio Builders, Techmindz, and
+            Oscilix. My work lives at the intersection of clean architecture, reliable state management, and interfaces
+            people enjoy using — not just tolerate.</p>
+          <p class="about-p">I integrate REST APIs, wire up Firebase backends, and squeeze every bit of performance from
+            Dart — while using Generative AI tools to stay 10x ahead in the development cycle.</p>
+          <p class="about-p">Every commit I push is intentional. Every screen I ship is tested. Every architecture
+            decision I make is made for the long game.</p>
+          <div class="about-tags">
+            <span class="atag">Flutter</span><span class="atag">Dart</span><span class="atag">Firebase</span>
+            <span class="atag">REST API</span><span class="atag">Provider</span><span class="atag">MVVM</span>
+            <span class="atag">Material 3</span><span class="atag">Hive</span><span class="atag">SQLite</span>
+            <span class="atag">GitHub</span><span class="atag">AI-Assisted Dev</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="rvr">
-      <p class="about-quote">
-        I don't just write Flutter code —<br>
-        I build <span>experiences</span> that users<br>actually remember.
-      </p>
-      <p class="about-p">Flutter developer with professional experience at Portfolio Builders, Techmindz, and Oscilix. My work lives at the intersection of clean architecture, reliable state management, and interfaces people enjoy using — not just tolerate.</p>
-      <p class="about-p">I integrate REST APIs, wire up Firebase backends, and squeeze every bit of performance from Dart — while using Generative AI tools to stay 10x ahead in the development cycle.</p>
-      <p class="about-p">Every commit I push is intentional. Every screen I ship is tested. Every architecture decision I make is made for the long game.</p>
-      <div class="about-tags">
-        <span class="atag">Flutter</span><span class="atag">Dart</span><span class="atag">Firebase</span>
-        <span class="atag">REST API</span><span class="atag">Provider</span><span class="atag">MVVM</span>
-        <span class="atag">Material 3</span><span class="atag">Hive</span><span class="atag">SQLite</span>
-        <span class="atag">GitHub</span><span class="atag">AI-Assisted Dev</span>
+  </div>
+
+  <!-- ══ NUMBERS BAND ══ -->
+  <div class="numbers-band">
+    <div class="numbers-inner">
+      <div class="num-cell rv">
+        <div class="num-big">5+</div>
+        <div class="num-sub">Production Apps</div>
+      </div>
+      <div class="num-cell rv">
+        <div class="num-big">3</div>
+        <div class="num-sub">Industry Roles</div>
+      </div>
+      <div class="num-cell rv">
+        <div class="num-big">100%</div>
+        <div class="num-sub">Clean Architecture</div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-<!-- ══ NUMBERS BAND ══ -->
-<div class="numbers-band">
-  <div class="numbers-inner">
-    <div class="num-cell rv"><div class="num-big">5+</div><div class="num-sub">Production Apps</div></div>
-    <div class="num-cell rv"><div class="num-big">3</div><div class="num-sub">Industry Roles</div></div>
-    <div class="num-cell rv"><div class="num-big">100%</div><div class="num-sub">Clean Architecture</div></div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      SERVICES
 ══════════════════════════════════════ -->
-<div class="section" id="services">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Expertise</div>
-    <h2 class="sec-title grad">ENGINEERING<br>MODERN <em>MOBILE</em><br>EXPERIENCES</h2>
-    <p class="sec-sub">Building high-performance applications with a focus on architecture, scalability, and pixel-perfect design.</p>
-  </div>
-  
-  <div class="svc-bento rv">
-    <!-- HERO CARD -->
-    <div class="svc-card hero">
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/></svg></div>
-      <div class="svc-name">Flutter Full Stack Development</div>
-      <p class="svc-desc">Creating enterprise-grade iOS & Android applications. I specialize in building complex, high-performance apps that handle heavy data while maintaining silky-smooth 60fps animations.</p>
-      <div class="svc-tags">
-        <span class="s-tag">iOS & Android</span><span class="s-tag">Clean Arch</span><span class="s-tag">Performance</span>
+  <div class="section" id="services">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Expertise</div>
+        <h2 class="sec-title grad">ENGINEERING<br>MODERN <em>MOBILE</em><br>EXPERIENCES</h2>
+        <p class="sec-sub">Building high-performance applications with a focus on architecture, scalability, and
+          pixel-perfect design.</p>
+      </div>
+
+      <div class="svc-bento rv">
+        <!-- HERO CARD -->
+        <div class="svc-card hero">
+          <div class="svc-ico"><svg viewBox="0 0 24 24">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2" />
+            </svg></div>
+          <div class="svc-name">Flutter Full Stack Development</div>
+          <p class="svc-desc">Creating enterprise-grade iOS & Android applications. I specialize in building complex,
+            high-performance apps that handle heavy data while maintaining silky-smooth 60fps animations.</p>
+          <div class="svc-tags">
+            <span class="s-tag">iOS & Android</span><span class="s-tag">Clean Arch</span><span
+              class="s-tag">Performance</span>
+          </div>
+        </div>
+
+        <!-- UI/UX CARD -->
+        <div class="svc-card">
+          <div class="svc-ico"><svg viewBox="0 0 24 24">
+              <path
+                d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+            </svg></div>
+          <div class="svc-name">UI/UX Implementation</div>
+          <p class="svc-desc">Transforming complex design systems into pixel-perfect Flutter widgets with precise
+            attention to detail.</p>
+        </div>
+
+        <!-- FIREBASE CARD -->
+        <div class="svc-card">
+          <div class="svc-ico"><svg viewBox="0 0 24 24">
+              <path
+                d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4" />
+            </svg></div>
+          <div class="svc-name">Cloud Backend & Firebase</div>
+          <p class="svc-desc">Scalable database architecture using Firestore and real-time synchronization strategies.
+          </p>
+        </div>
+
+        <!-- WIDE CARD -->
+        <div class="svc-card wide">
+          <div class="svc-ico"><svg viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg></div>
+          <div class="svc-name">Scalable State Management & Architecture</div>
+          <p class="svc-desc">Expert-level implementation of Provider, MVVM, and Clean Architecture patterns. I build
+            codebases that are easy to test, maintain, and scale to millions of users.</p>
+          <div class="svc-tags">
+            <span class="s-tag">Provider</span><span class="s-tag">MVVM</span><span class="s-tag">Modular Code</span>
+          </div>
+        </div>
+
+        <!-- OPTIMIZATION -->
+        <div class="svc-card">
+          <div class="svc-ico"><svg viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg></div>
+          <div class="svc-name">Optimization</div>
+          <p class="svc-desc">Reducing app bundle size and optimizing memory usage for low-end devices.</p>
+        </div>
       </div>
     </div>
-
-    <!-- UI/UX CARD -->
-    <div class="svc-card">
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
-      <div class="svc-name">UI/UX Implementation</div>
-      <p class="svc-desc">Transforming complex design systems into pixel-perfect Flutter widgets with precise attention to detail.</p>
-    </div>
-
-    <!-- FIREBASE CARD -->
-    <div class="svc-card">
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4"/></svg></div>
-      <div class="svc-name">Cloud Backend & Firebase</div>
-      <p class="svc-desc">Scalable database architecture using Firestore and real-time synchronization strategies.</p>
-    </div>
-
-    <!-- WIDE CARD -->
-    <div class="svc-card wide">
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-      <div class="svc-name">Scalable State Management & Architecture</div>
-      <p class="svc-desc">Expert-level implementation of Provider, MVVM, and Clean Architecture patterns. I build codebases that are easy to test, maintain, and scale to millions of users.</p>
-      <div class="svc-tags">
-        <span class="s-tag">Provider</span><span class="s-tag">MVVM</span><span class="s-tag">Modular Code</span>
-      </div>
-    </div>
-
-    <!-- OPTIMIZATION -->
-    <div class="svc-card">
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-      <div class="svc-name">Optimization</div>
-      <p class="svc-desc">Reducing app bundle size and optimizing memory usage for low-end devices.</p>
-    </div>
   </div>
-</div>
-</div>
 
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      SKILLS
 ══════════════════════════════════════ -->
-<div class="section" id="skills">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Technical Depth</div>
-    <h2 class="sec-title">SKILLS THAT<br><em>SHIP CODE</em></h2>
-  </div>
-  <div class="skills-wrap">
-    <div class="rvl">
-      <div class="skill-group">
-        <span class="skill-grp-lbl">Core Stack</span>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">Flutter & Dart</span><span class="skill-p">90%</span></div><div class="skill-track"><div class="skill-bar" data-w="90"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">UI/UX — Material Design 3</span><span class="skill-p">88%</span></div><div class="skill-track"><div class="skill-bar" data-w="88"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">Provider State Management</span><span class="skill-p">85%</span></div><div class="skill-track"><div class="skill-bar" data-w="85"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">REST API & JSON Handling</span><span class="skill-p">85%</span></div><div class="skill-track"><div class="skill-bar" data-w="85"></div></div></div>
+  <div class="section" id="skills">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Technical Depth</div>
+        <h2 class="sec-title">SKILLS THAT<br><em>SHIP CODE</em></h2>
       </div>
-      <div class="skill-group">
-        <span class="skill-grp-lbl">Backend & Storage</span>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">Firebase Auth + Firestore</span><span class="skill-p">80%</span></div><div class="skill-track"><div class="skill-bar" data-w="80"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">SQLite / Hive / SharedPrefs</span><span class="skill-p">82%</span></div><div class="skill-track"><div class="skill-bar" data-w="82"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span class="skill-n">Git & GitHub</span><span class="skill-p">78%</span></div><div class="skill-track"><div class="skill-bar" data-w="78"></div></div></div>
+      <div class="skills-wrap">
+        <div class="rvl">
+          <div class="skill-group">
+            <span class="skill-grp-lbl">Core Stack</span>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">Flutter & Dart</span><span class="skill-p">90%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="90"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">UI/UX — Material Design 3</span><span
+                  class="skill-p">88%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="88"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">Provider State Management</span><span
+                  class="skill-p">85%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="85"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">REST API & JSON Handling</span><span
+                  class="skill-p">85%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="85"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-grp-lbl">Backend & Storage</span>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">Firebase Auth + Firestore</span><span
+                  class="skill-p">80%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="80"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">SQLite / Hive / SharedPrefs</span><span
+                  class="skill-p">82%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="82"></div>
+              </div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span class="skill-n">Git & GitHub</span><span class="skill-p">78%</span></div>
+              <div class="skill-track">
+                <div class="skill-bar" data-w="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvr">
+          <span class="skill-grp-lbl">Technology Toolbox</span>
+          <div class="pills-grid">
+            <span class="pill">Flutter</span><span class="pill">Dart</span><span class="pill">Provider</span>
+            <span class="pill">Firebase</span><span class="pill">Firestore</span><span class="pill">REST API</span>
+            <span class="pill">JSON Parsing</span><span class="pill">Hive</span><span class="pill">SQLite</span>
+            <span class="pill">SharedPrefs</span><span class="pill">Git</span><span class="pill">GitHub</span>
+            <span class="pill">MVC</span><span class="pill">MVVM</span><span class="pill">Material 3</span>
+            <span class="pill">Java</span><span class="pill">C</span><span class="pill">SQL</span><span
+              class="pill">Postman</span>
+            <span class="pill">Figma</span><span class="pill">Odoo ERP</span><span class="pill">AI Dev Tools</span>
+            <span class="pill">Responsive UI</span><span class="pill">Debugging</span><span
+              class="pill">Performance</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="rvr">
-      <span class="skill-grp-lbl">Technology Toolbox</span>
-      <div class="pills-grid">
-        <span class="pill">Flutter</span><span class="pill">Dart</span><span class="pill">Provider</span>
-        <span class="pill">Firebase</span><span class="pill">Firestore</span><span class="pill">REST API</span>
-        <span class="pill">JSON Parsing</span><span class="pill">Hive</span><span class="pill">SQLite</span>
-        <span class="pill">SharedPrefs</span><span class="pill">Git</span><span class="pill">GitHub</span>
-        <span class="pill">MVC</span><span class="pill">MVVM</span><span class="pill">Material 3</span>
-        <span class="pill">Java</span><span class="pill">C</span><span class="pill">SQL</span><span class="pill">Postman</span>
-        <span class="pill">Figma</span><span class="pill">Odoo ERP</span><span class="pill">AI Dev Tools</span>
-        <span class="pill">Responsive UI</span><span class="pill">Debugging</span><span class="pill">Performance</span>
-      </div>
-    </div>
   </div>
-</div>
-</div>
 
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      PROJECTS
 ══════════════════════════════════════ -->
-<div class="section" id="work">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Selected Projects</div>
-    <h2 class="sec-title">APPS THAT<br>SOLVE <em>REAL</em><br><span class="ol">PROBLEMS</span></h2>
-    <p class="sec-sub">Each project is a production-grade Flutter application — clean code, scalable architecture, and a user experience that earns its place on the home screen.</p>
+  <div class="section" id="work">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Selected Projects</div>
+        <h2 class="sec-title">APPS THAT<br>SOLVE <em>REAL</em><br><span class="ol">PROBLEMS</span></h2>
+        <p class="sec-sub">Each project is a production-grade Flutter application — clean code, scalable architecture,
+          and a user experience that earns its place on the home screen.</p>
+      </div>
+
+      <div class="proj-grid">
+
+        <!-- ── FEATURED: GTECH LMS ── -->
+        <div class="proj-card wide rv">
+          <div class="proj-vis">
+            <img src="gtech_lms.png" alt="G-Tech LMS" class="proj-vis-canvas" style="object-fit: cover;">
+            <div class="proj-cover">
+              <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
+              <a href="#" class="pb pb-o">Case Study</a>
+            </div>
+          </div>
+          <div class="proj-inf">
+            <span class="cs-badge">★ Case Study</span>
+            <span class="proj-cat">Educational Platform</span>
+            <h3 class="proj-title">GTECH — Learning Management System</h3>
+            <p class="proj-desc">Dual-sided Flutter LMS for students and instructors. Complete course management with
+              Firebase Firestore as the live backend, multi-role Auth, and a UI that serves two very different user
+              journeys in one cohesive app.</p>
+            <div class="cs-grid">
+              <div><span class="cs-label">Problem</span><span class="cs-val">No central hub for courses and real-time
+                  student tracking</span></div>
+              <div><span class="cs-label">Solution</span><span class="cs-val">Integrated REST APIs for real-time course
+                  & user management</span></div>
+              <div><span class="cs-label">Result</span><span class="cs-val">Secure JWT Auth + scalable course
+                  synchronization</span></div>
+            </div>
+            <div class="proj-stack" style="margin-top:1.5rem">
+              <span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">Firestore</span>
+              <span class="chip">Cloud Auth</span><span class="chip">Provider</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── E-COMMERCE ── -->
+        <div class="proj-card rv">
+          <div class="proj-vis">
+            <img src="ecommerce_app.png" alt="E-Commerce App" class="proj-vis-canvas" style="object-fit: cover;">
+            <div class="proj-cover">
+              <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="proj-inf">
+            <span class="proj-cat">Mobile Commerce</span>
+            <h3 class="proj-title">E-Commerce App</h3>
+            <p class="proj-desc">Modern, fast, and seamless e-commerce app built with React Native and TypeScript.
+              Features a live product catalog using FakeStore API, smart category filtering, cart management, and secure
+              checkout.</p>
+            <div class="proj-stack"><span class="chip">React Native</span><span class="chip">TypeScript</span><span
+                class="chip">REST API</span><span class="chip">FakeStore API</span></div>
+          </div>
+        </div>
+
+        <!-- ── PORTFOLIO BUILDERS WEB ── -->
+        <div class="proj-card rv">
+          <div class="proj-vis">
+            <img src="portfoliowebsite.png" alt="Portfolio Builders Website" class="proj-vis-canvas"
+              style="object-fit: cover;">
+            <div class="proj-cover">
+              <a href="#" class="pb pb-o">Live Platform</a>
+            </div>
+          </div>
+          <div class="proj-inf">
+            <span class="proj-cat">Web Platform</span>
+            <h3 class="proj-title">Portfolio Builders Website</h3>
+            <p class="proj-desc">A premium free-course educational hub and learning management platform. Features a
+              structured, roadmap-based course directory, step-by-step video lessons, and native project assignment
+              tracking.</p>
+            <div class="proj-stack"><span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span
+                class="chip">LMS</span><span class="chip">UI/UX Design</span></div>
+          </div>
+        </div>
+
+        <!-- ── NOTE TAKING APP ── -->
+        <div class="proj-card wide rev rv">
+          <div class="proj-vis">
+            <img src="NoteApp.png" alt="Note-Taking Application" class="proj-vis-canvas" style="object-fit: cover;">
+            <div class="proj-cover">
+              <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="proj-inf">
+            <span class="proj-cat">Productivity Tool</span>
+            <h3 class="proj-title">Note-Taking Application</h3>
+            <p class="proj-desc">A full-stack, responsive note-taking application designed for high productivity.
+              Features secure note creation and editing, folder-based organization, custom tag filters, real-time
+              search, and cloud database sync.</p>
+            <div class="cs-grid">
+              <div><span class="cs-label">Core</span><span class="cs-val">Folder and tag classification + swift search
+                  filter</span></div>
+              <div><span class="cs-label">Storage</span><span class="cs-val">Node.js and MongoDB backend with live cloud
+                  synchronization</span></div>
+              <div><span class="cs-label">UI</span><span class="cs-val">Highly interactive dashboard built using React
+                  components</span></div>
+            </div>
+            <div class="proj-stack" style="margin-top:1.5rem">
+              <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span
+                class="chip">REST API</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <div class="proj-grid">
-
-    <!-- ── FEATURED: GTECH LMS ── -->
-    <div class="proj-card wide rv">
-      <div class="proj-vis">
-        <img src="gtech_lms.png" alt="G-Tech LMS" class="proj-vis-canvas" style="object-fit: cover;">
-        <div class="proj-cover">
-          <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
-          <a href="#" class="pb pb-o">Case Study</a>
-        </div>
-      </div>
-      <div class="proj-inf">
-        <span class="cs-badge">★ Case Study</span>
-        <span class="proj-cat">Educational Platform</span>
-        <h3 class="proj-title">GTECH — Learning Management System</h3>
-        <p class="proj-desc">Dual-sided Flutter LMS for students and instructors. Complete course management with Firebase Firestore as the live backend, multi-role Auth, and a UI that serves two very different user journeys in one cohesive app.</p>
-        <div class="cs-grid">
-          <div><span class="cs-label">Problem</span><span class="cs-val">No central hub for courses and real-time student tracking</span></div>
-          <div><span class="cs-label">Solution</span><span class="cs-val">Integrated REST APIs for real-time course & user management</span></div>
-          <div><span class="cs-label">Result</span><span class="cs-val">Secure JWT Auth + scalable course synchronization</span></div>
-        </div>
-        <div class="proj-stack" style="margin-top:1.5rem">
-          <span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">Firestore</span>
-          <span class="chip">Cloud Auth</span><span class="chip">Provider</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── E-COMMERCE ── -->
-    <div class="proj-card rv">
-      <div class="proj-vis">
-        <img src="ecommerce_app.png" alt="E-Commerce App" class="proj-vis-canvas" style="object-fit: cover;">
-        <div class="proj-cover">
-          <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
-        </div>
-      </div>
-      <div class="proj-inf">
-        <span class="proj-cat">Mobile Commerce</span>
-        <h3 class="proj-title">E-Commerce App</h3>
-        <p class="proj-desc">Modern, fast, and seamless e-commerce app built with React Native and TypeScript. Features a live product catalog using FakeStore API, smart category filtering, cart management, and secure checkout.</p>
-        <div class="proj-stack"><span class="chip">React Native</span><span class="chip">TypeScript</span><span class="chip">REST API</span><span class="chip">FakeStore API</span></div>
-      </div>
-    </div>
-
-    <!-- ── PORTFOLIO BUILDERS WEB ── -->
-    <div class="proj-card rv">
-      <div class="proj-vis">
-        <img src="portfoliowebsite.png" alt="Portfolio Builders Website" class="proj-vis-canvas" style="object-fit: cover;">
-        <div class="proj-cover">
-          <a href="#" class="pb pb-o">Live Platform</a>
-        </div>
-      </div>
-      <div class="proj-inf">
-        <span class="proj-cat">Web Platform</span>
-        <h3 class="proj-title">Portfolio Builders Website</h3>
-        <p class="proj-desc">A premium free-course educational hub and learning management platform. Features a structured, roadmap-based course directory, step-by-step video lessons, and native project assignment tracking.</p>
-        <div class="proj-stack"><span class="chip">HTML/CSS</span><span class="chip">JavaScript</span><span class="chip">LMS</span><span class="chip">UI/UX Design</span></div>
-      </div>
-    </div>
-
-    <!-- ── NOTE TAKING APP ── -->
-    <div class="proj-card wide rev rv">
-      <div class="proj-vis">
-        <img src="NoteApp.png" alt="Note-Taking Application" class="proj-vis-canvas" style="object-fit: cover;">
-        <div class="proj-cover">
-          <a href="https://github.com/MahadevBiniraj" target="_blank" class="pb">GitHub ↗</a>
-        </div>
-      </div>
-      <div class="proj-inf">
-        <span class="proj-cat">Productivity Tool</span>
-        <h3 class="proj-title">Note-Taking Application</h3>
-        <p class="proj-desc">A full-stack, responsive note-taking application designed for high productivity. Features secure note creation and editing, folder-based organization, custom tag filters, real-time search, and cloud database sync.</p>
-        <div class="cs-grid">
-          <div><span class="cs-label">Core</span><span class="cs-val">Folder and tag classification + swift search filter</span></div>
-          <div><span class="cs-label">Storage</span><span class="cs-val">Node.js and MongoDB backend with live cloud synchronization</span></div>
-          <div><span class="cs-label">UI</span><span class="cs-val">Highly interactive dashboard built using React components</span></div>
-        </div>
-        <div class="proj-stack" style="margin-top:1.5rem">
-          <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">REST API</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      EXPERIENCE
 ══════════════════════════════════════ -->
-<div class="section" id="experience">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Career</div>
-    <h2 class="sec-title">EXPERIENCE &<br><em>CREDENTIALS</em></h2>
-  </div>
-  <div class="exp-wrap">
-    <!-- Timeline -->
-    <div class="rvl">
-      <div class="eyebrow" style="margin-bottom:1.5rem">Work Experience</div>
-      <div class="timeline">
-        <div class="tl-item rv">
-          <div class="tl-dot"></div>
-          <span class="tl-yr">Mar 2026 – Present</span>
-          <h3 class="tl-role">Flutter Developer</h3>
-          <span class="tl-co">Portfolio Builders & Portfolix Tech</span>
-          <ul class="tl-pts">
-            <li>Developing scalable cross-platform mobile applications using Flutter and Dart following MVVM architecture principles.</li>
-            <li>Implementing REST API integrations, reusable UI components, and Provider state management for production-ready applications.</li>
-            <li>Collaborating with development teams to deliver responsive, high-performance applications with clean and maintainable code.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tl-tag">Flutter</span>
-            <span class="tl-tag">Dart</span>
-            <span class="tl-tag">MVVM</span>
-            <span class="tl-tag">Provider</span>
-            <span class="tl-tag">REST APIs</span>
+  <div class="section" id="experience">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Career</div>
+        <h2 class="sec-title">EXPERIENCE &<br><em>CREDENTIALS</em></h2>
+      </div>
+      <div class="exp-wrap">
+        <!-- Timeline -->
+        <div class="rvl">
+          <div class="eyebrow" style="margin-bottom:1.5rem">Work Experience</div>
+          <div class="timeline">
+            <div class="tl-item rv">
+              <div class="tl-dot"></div>
+              <span class="tl-yr">Mar 2026 – Present</span>
+              <h3 class="tl-role">Flutter Developer</h3>
+              <span class="tl-co">Portfolio Builders & Portfolix Tech</span>
+              <ul class="tl-pts">
+                <li>Developing scalable cross-platform mobile applications using Flutter and Dart following MVVM
+                  architecture principles.</li>
+                <li>Implementing REST API integrations, reusable UI components, and Provider state management for
+                  production-ready applications.</li>
+                <li>Collaborating with development teams to deliver responsive, high-performance applications with clean
+                  and maintainable code.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">Flutter</span>
+                <span class="tl-tag">Dart</span>
+                <span class="tl-tag">MVVM</span>
+                <span class="tl-tag">Provider</span>
+                <span class="tl-tag">REST APIs</span>
+              </div>
+            </div>
+            <div class="tl-item rv">
+              <div class="tl-dot"></div>
+              <span class="tl-yr">Nov 2025 – Jan 2026</span>
+              <h3 class="tl-role">Flutter Developer (Intern)</h3>
+              <span class="tl-co">Techmindz · Kochi, Kerala</span>
+              <ul class="tl-pts">
+                <li>Developed responsive mobile applications using Flutter, Firebase, REST APIs, and Provider state
+                  management.</li>
+                <li>Assisted in debugging, testing, and improving application performance and UI responsiveness.</li>
+                <li>Participated in feature implementation and collaborated with team members in agile development
+                  workflows.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">Flutter</span>
+                <span class="tl-tag">Dart</span>
+                <span class="tl-tag">Firebase</span>
+                <span class="tl-tag">Provider</span>
+                <span class="tl-tag">REST APIs</span>
+                <span class="tl-tag">Git</span>
+              </div>
+            </div>
+            <div class="tl-item rv">
+              <div class="tl-dot"></div>
+              <span class="tl-yr">Mar 2025 – Jul 2025</span>
+              <h3 class="tl-role">Technical Consultant - ERP (Odoo)</h3>
+              <span class="tl-co">Oscilix</span>
+              <ul class="tl-pts">
+                <li>Customized ERP modules and supported workflow automation processes using Odoo.</li>
+                <li>Assisted in User Acceptance Testing (UAT), requirement analysis, and business process improvements.
+                </li>
+                <li>Worked closely with teams to streamline operational workflows and improve system efficiency.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">Odoo ERP</span>
+                <span class="tl-tag">UAT Testing</span>
+                <span class="tl-tag">Automation</span>
+                <span class="tl-tag">Requirement Analysis</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tl-item rv">
-          <div class="tl-dot"></div>
-          <span class="tl-yr">Nov 2025 – Jan 2026</span>
-          <h3 class="tl-role">Flutter Developer (Intern)</h3>
-          <span class="tl-co">Techmindz · Kochi, Kerala</span>
-          <ul class="tl-pts">
-            <li>Developed responsive mobile applications using Flutter, Firebase, REST APIs, and Provider state management.</li>
-            <li>Assisted in debugging, testing, and improving application performance and UI responsiveness.</li>
-            <li>Participated in feature implementation and collaborated with team members in agile development workflows.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tl-tag">Flutter</span>
-            <span class="tl-tag">Dart</span>
-            <span class="tl-tag">Firebase</span>
-            <span class="tl-tag">Provider</span>
-            <span class="tl-tag">REST APIs</span>
-            <span class="tl-tag">Git</span>
+
+        <!-- Education + Certs -->
+        <div class="rvr">
+          <div class="eyebrow" style="margin-bottom:1.5rem">Education</div>
+          <div class="edu-card rv">
+            <span class="edu-yr">2019 – 2023</span>
+            <h3 class="edu-deg">B.Tech — Computer Science & Engineering</h3>
+            <p class="edu-sch">St. Thomas College of Engineering and Technology<br>APJ Abdul Kalam Technological
+              University, Kerala</p>
+            <div class="edu-grd">First Class</div>
           </div>
-        </div>
-        <div class="tl-item rv">
-          <div class="tl-dot"></div>
-          <span class="tl-yr">Mar 2025 – Jul 2025</span>
-          <h3 class="tl-role">Technical Consultant - ERP (Odoo)</h3>
-          <span class="tl-co">Oscilix</span>
-          <ul class="tl-pts">
-            <li>Customized ERP modules and supported workflow automation processes using Odoo.</li>
-            <li>Assisted in User Acceptance Testing (UAT), requirement analysis, and business process improvements.</li>
-            <li>Worked closely with teams to streamline operational workflows and improve system efficiency.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tl-tag">Odoo ERP</span>
-            <span class="tl-tag">UAT Testing</span>
-            <span class="tl-tag">Automation</span>
-            <span class="tl-tag">Requirement Analysis</span>
+          <div class="eyebrow" style="margin-top:2.5rem;margin-bottom:1.2rem">Certifications</div>
+          <div class="cert-row">
+            <div class="cert-card rv">
+              <div class="cert-icon-wrapper">🎓</div>
+              <div>
+                <h4 class="cert-n">Flutter App Development</h4>
+                <div class="cert-iss">Luminar Technolab · 2024</div>
+                <p class="cert-bd">Intensive professional training focusing on production-ready app development.</p>
+              </div>
+            </div>
+            <div class="cert-card rv">
+              <div class="cert-icon-wrapper">🏆</div>
+              <div>
+                <h4 class="cert-n">NACTET Certification</h4>
+                <div class="cert-iss">Android & Flutter Development</div>
+                <p class="cert-bd">National Council for Technology and Training verified credential.</p>
+              </div>
+            </div>
+            <div class="cert-card rv" style="grid-column: span 2">
+              <div class="cert-icon-wrapper">📜</div>
+              <div>
+                <h4 class="cert-n">Vocational HSS Skill Certificate</h4>
+                <div class="cert-iss">OOP, Databases, Web & Networking</div>
+                <p class="cert-bd">Foundational certification in core computing and software engineering principles.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Education + Certs -->
-    <div class="rvr">
-      <div class="eyebrow" style="margin-bottom:1.5rem">Education</div>
-      <div class="edu-card rv">
-        <span class="edu-yr">2019 – 2023</span>
-        <h3 class="edu-deg">B.Tech — Computer Science & Engineering</h3>
-        <p class="edu-sch">St. Thomas College of Engineering and Technology<br>APJ Abdul Kalam Technological University, Kerala</p>
-        <div class="edu-grd">First Class</div>
-      </div>
-      <div class="eyebrow" style="margin-top:2.5rem;margin-bottom:1.2rem">Certifications</div>
-      <div class="cert-row">
-        <div class="cert-card rv">
-          <div class="cert-icon-wrapper">🎓</div>
-          <div>
-            <h4 class="cert-n">Flutter App Development</h4>
-            <div class="cert-iss">Luminar Technolab · 2024</div>
-            <p class="cert-bd">Intensive professional training focusing on production-ready app development.</p>
-          </div>
-        </div>
-        <div class="cert-card rv">
-          <div class="cert-icon-wrapper">🏆</div>
-          <div>
-            <h4 class="cert-n">NACTET Certification</h4>
-            <div class="cert-iss">Android & Flutter Development</div>
-            <p class="cert-bd">National Council for Technology and Training verified credential.</p>
-          </div>
-        </div>
-        <div class="cert-card rv" style="grid-column: span 2">
-          <div class="cert-icon-wrapper">📜</div>
-          <div>
-            <h4 class="cert-n">Vocational HSS Skill Certificate</h4>
-            <div class="cert-iss">OOP, Databases, Web & Networking</div>
-            <p class="cert-bd">Foundational certification in core computing and software engineering principles.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
-</div>
 
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      CONTACT
 ══════════════════════════════════════ -->
-<div class="section" id="contact">
-<div class="section-inner">
-  <div class="rv">
-    <div class="eyebrow">Get in touch</div>
-  </div>
-  <div class="contact-wrap">
-    <div class="rvl">
-      <h2 class="contact-headline">LET'S BUILD<br>SOMETHING<br><em>IMPACTFUL.</em></h2>
-      <p class="contact-sub">Have a mobile app idea? Need a Flutter developer who ships clean, scalable code with zero hand-holding? Let's talk.</p>
-      <div class="c-details">
-        <div class="c-item">
-          <div class="c-ico">📞</div>
-          <div><div class="c-lbl">Phone</div><div class="c-val">+91 89218 10225</div></div>
-        </div>
-        <div class="c-item">
-          <div class="c-ico">✉️</div>
-          <div><div class="c-lbl">Email</div><div class="c-val">mahadevbiniraj6@gmail.com</div></div>
-        </div>
-        <div class="c-item">
-          <div class="c-ico">📍</div>
-          <div><div class="c-lbl">Location</div><div class="c-val">Alappuzha, Kerala, India</div></div>
-        </div>
+  <div class="section" id="contact">
+    <div class="section-inner">
+      <div class="rv">
+        <div class="eyebrow">Get in touch</div>
       </div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/mahadevbiniraj" class="soc" target="_blank" title="LinkedIn">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/></svg>
-        </a>
-        <a href="https://github.com/MahadevBiniraj" class="soc" target="_blank" title="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/mahadevbiniraj" class="soc" target="_blank" title="Instagram">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-        </a>
+      <div class="contact-wrap">
+        <div class="rvl">
+          <h2 class="contact-headline">LET'S BUILD<br>SOMETHING<br><em>IMPACTFUL.</em></h2>
+          <p class="contact-sub">Have a mobile app idea? Need a Flutter developer who ships clean, scalable code with
+            zero hand-holding? Let's talk.</p>
+          <div class="c-details">
+            <div class="c-item">
+              <div class="c-ico">📞</div>
+              <div>
+                <div class="c-lbl">Phone</div>
+                <div class="c-val">+91 89218 10225</div>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-ico">✉️</div>
+              <div>
+                <div class="c-lbl">Email</div>
+                <div class="c-val">mahadevbiniraj6@gmail.com</div>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-ico">📍</div>
+              <div>
+                <div class="c-lbl">Location</div>
+                <div class="c-val">Alappuzha, Kerala, India</div>
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/mahadevbiniraj" class="soc" target="_blank" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" />
+              </svg>
+            </a>
+            <a href="https://github.com/MahadevBiniraj" class="soc" target="_blank" title="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/mahadevbiniraj" class="soc" target="_blank" title="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="rvr">
+          <div class="form-row">
+            <div class="fg"><label class="fl">Your Name</label><input id="contact-name" class="fi" type="text" /></div>
+            <div class="fg"><label class="fl">Email Address</label><input id="contact-email" class="fi" type="email" />
+            </div>
+          </div>
+          <div class="fg"><label class="fl">Subject</label><input id="contact-subject" class="fi" type="text" /></div>
+          <div class="fg"><label class="fl">Message</label><textarea id="contact-message" class="ft"></textarea></div>
+          <button class="f-submit" onclick="sendMsg(this)">Send Message →</button>
+        </div>
       </div>
     </div>
-    <div class="rvr">
-      <div class="form-row">
-        <div class="fg"><label class="fl">Your Name</label><input id="contact-name" class="fi" type="text"/></div>
-        <div class="fg"><label class="fl">Email Address</label><input id="contact-email" class="fi" type="email"/></div>
-      </div>
-      <div class="fg"><label class="fl">Subject</label><input id="contact-subject" class="fi" type="text"/></div>
-      <div class="fg"><label class="fl">Message</label><textarea id="contact-message" class="ft"></textarea></div>
-      <button class="f-submit" onclick="sendMsg(this)">Send Message →</button>
+  </div>
+
+  <!-- ── SUCCESS POPUP ── -->
+  <div id="success-popup" class="success-popup">
+    <div class="sp-icon">
+      <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
     </div>
+    <div class="sp-content">
+      <h4 class="sp-title">Message Sent!</h4>
+      <p class="sp-desc">Your information has been sent to Mahadevbiniraj.</p>
+    </div>
+    <button class="sp-close" onclick="closePopup()">✕</button>
+    <div class="sp-progress"></div>
   </div>
-</div>
-</div>
 
-<!-- ── SUCCESS POPUP ── -->
-<div id="success-popup" class="success-popup">
-  <div class="sp-icon">
-    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-  </div>
-  <div class="sp-content">
-    <h4 class="sp-title">Message Sent!</h4>
-    <p class="sp-desc">Your information has been sent to Mahadevbiniraj.</p>
-  </div>
-  <button class="sp-close" onclick="closePopup()">✕</button>
-  <div class="sp-progress"></div>
-</div>
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">MAHADEV<span>.</span></div>
+      <div class="footer-txt">© 2026 Mahadev Biniraj · <a href="https://github.com/MahadevBiniraj"
+          target="_blank">GitHub</a></div>
+      <div class="footer-mono">Flutter Full Stack Developer</div>
+    </div>
+  </footer>
 
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">MAHADEV<span>.</span></div>
-    <div class="footer-txt">© 2026 Mahadev Biniraj · <a href="https://github.com/MahadevBiniraj" target="_blank">GitHub</a></div>
-    <div class="footer-mono">Flutter Full Stack Developer</div>
-  </div>
-</footer>
-
-<!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════════
      SCRIPTS
 ══════════════════════════════════════ -->
-<script>
-/* ── PARTICLE BG ── */
-(function(){
-  const c = document.getElementById('bg-canvas');
-  const ctx = c.getContext('2d');
-  let W, H, pts = [], mouse = {x:0,y:0};
+  <script>
+    /* ── PARTICLE BG ── */
+    (function () {
+      const c = document.getElementById('bg-canvas');
+      const ctx = c.getContext('2d');
+      let W, H, pts = [], mouse = { x: 0, y: 0 };
 
-  function init(){
-    W = c.width = window.innerWidth;
-    H = c.height = window.innerHeight;
-    pts = [];
-    const n = Math.floor((W*H)/18000);
-    for(let i=0;i<n;i++){
-      pts.push({
-        x:Math.random()*W, y:Math.random()*H,
-        vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25,
-        r:Math.random()*1.2+.3, a:Math.random()*.5+.1
-      });
-    }
-  }
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    // lines between close points
-    for(let i=0;i<pts.length;i++){
-      for(let j=i+1;j<pts.length;j++){
-        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
-        const d=Math.sqrt(dx*dx+dy*dy);
-        if(d<120){
-          ctx.beginPath();
-          ctx.moveTo(pts[i].x,pts[i].y);
-          ctx.lineTo(pts[j].x,pts[j].y);
-          ctx.strokeStyle=`rgba(6,182,212,${.1*(1-d/120)})`;
-          ctx.lineWidth=.5;
-          ctx.stroke();
+      function init() {
+        W = c.width = window.innerWidth;
+        H = c.height = window.innerHeight;
+        pts = [];
+        const n = Math.floor((W * H) / 18000);
+        for (let i = 0; i < n; i++) {
+          pts.push({
+            x: Math.random() * W, y: Math.random() * H,
+            vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25,
+            r: Math.random() * 1.2 + .3, a: Math.random() * .5 + .1
+          });
         }
       }
-      // mouse connection
-      const mx=pts[i].x-mouse.x, my=pts[i].y-mouse.y;
-      const md=Math.sqrt(mx*mx+my*my);
-      if(md<180){
-        ctx.beginPath();
-        ctx.moveTo(pts[i].x,pts[i].y);
-        ctx.lineTo(mouse.x,mouse.y);
-        ctx.strokeStyle=`rgba(6,182,212,${.2*(1-md/180)})`;
-        ctx.lineWidth=.6;
-        ctx.stroke();
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        // lines between close points
+        for (let i = 0; i < pts.length; i++) {
+          for (let j = i + 1; j < pts.length; j++) {
+            const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 120) {
+              ctx.beginPath();
+              ctx.moveTo(pts[i].x, pts[i].y);
+              ctx.lineTo(pts[j].x, pts[j].y);
+              ctx.strokeStyle = `rgba(6,182,212,${.1 * (1 - d / 120)})`;
+              ctx.lineWidth = .5;
+              ctx.stroke();
+            }
+          }
+          // mouse connection
+          const mx = pts[i].x - mouse.x, my = pts[i].y - mouse.y;
+          const md = Math.sqrt(mx * mx + my * my);
+          if (md < 180) {
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(6,182,212,${.2 * (1 - md / 180)})`;
+            ctx.lineWidth = .6;
+            ctx.stroke();
+          }
+          // dot
+          ctx.beginPath();
+          ctx.arc(pts[i].x, pts[i].y, pts[i].r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(139,92,246,${pts[i].a})`;
+          ctx.fill();
+          // update
+          pts[i].x += pts[i].vx; pts[i].y += pts[i].vy;
+          if (pts[i].x < 0 || pts[i].x > W) pts[i].vx *= -1;
+          if (pts[i].y < 0 || pts[i].y > H) pts[i].vy *= -1;
+        }
+        requestAnimationFrame(draw);
       }
-      // dot
-      ctx.beginPath();
-      ctx.arc(pts[i].x,pts[i].y,pts[i].r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(139,92,246,${pts[i].a})`;
-      ctx.fill();
-      // update
-      pts[i].x+=pts[i].vx; pts[i].y+=pts[i].vy;
-      if(pts[i].x<0||pts[i].x>W) pts[i].vx*=-1;
-      if(pts[i].y<0||pts[i].y>H) pts[i].vy*=-1;
-    }
-    requestAnimationFrame(draw);
-  }
 
-  window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
-  window.addEventListener('resize',init);
-  init(); draw();
-})();
+      window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY });
+      window.addEventListener('resize', init);
+      init(); draw();
+    })();
 
-/* ── CURSOR ── */
-(function(){
-  const dot = document.getElementById('cur-dot');
-  const ring = document.getElementById('cur-ring');
-  let mx=0,my=0,rx=0,ry=0;
+    /* ── CURSOR ── */
+    (function () {
+      const dot = document.getElementById('cur-dot');
+      const ring = document.getElementById('cur-ring');
+      let mx = 0, my = 0, rx = 0, ry = 0;
 
-  document.addEventListener('mousemove',e=>{
-    mx=e.clientX; my=e.clientY;
-    dot.style.left=mx+'px'; dot.style.top=my+'px';
-  });
-
-  function lerpRing(){
-    rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
-    ring.style.left=rx+'px'; ring.style.top=ry+'px';
-    requestAnimationFrame(lerpRing);
-  }
-  lerpRing();
-
-  document.querySelectorAll('a,button,.svc-card,.proj-card,.num-cell,.atag,.pill').forEach(el=>{
-    el.addEventListener('mouseenter',()=>document.body.classList.add('link-hover'));
-    el.addEventListener('mouseleave',()=>document.body.classList.remove('link-hover'));
-  });
-})();
-
-/* ── NAV ── */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('solid',window.scrollY>60);
-});
-
-/* ── MOBILE MENU ── */
-function mobToggle(){document.getElementById('mobNav').classList.toggle('open')}
-
-/* ── TYPING ── */
-(function(){
-  const el = document.getElementById('typed');
-  const phrases = ['Flutter Developer','Full Stack Dev','Mobile Architect','UI Craftsman'];
-  let pi=0,ci=0,del=false;
-  function run(){
-    const cur=phrases[pi];
-    if(!del){el.textContent=cur.slice(0,++ci);if(ci===cur.length){del=true;setTimeout(run,1800);return}}
-    else{el.textContent=cur.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;setTimeout(run,400);return}}
-    setTimeout(run,del?55:95);
-  }
-  setTimeout(run,900);
-})();
-
-/* ── SCROLL REVEAL ── */
-(function(){
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')});
-  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>obs.observe(el));
-})();
-
-/* ── SKILL BARS ── */
-(function(){
-  const obs = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.querySelectorAll('.skill-bar').forEach(b=>b.style.width=b.dataset.w+'%');
-        obs.unobserve(e.target);
-      }
-    });
-  },{threshold:.3});
-  document.querySelectorAll('#skills').forEach(el=>obs.observe(el));
-})();
-
-/* ── PROJECT CANVAS VISUALS ── */
-function drawCanvas(id, hue, label){
-  const c = document.getElementById(id);
-  if(!c) return;
-  const ctx = c.getContext('2d');
-  let t=0, W=0, H=0;
-
-  function resize(){
-    W=c.width=c.offsetWidth;
-    H=c.height=c.offsetHeight;
-  }
-
-  function frame(){
-    t+=.008;
-    ctx.clearRect(0,0,W,H);
-
-    // background gradient
-    const bg=ctx.createLinearGradient(0,0,W,H);
-    bg.addColorStop(0,'#08080f');
-    bg.addColorStop(1,'#0c0c18');
-    ctx.fillStyle=bg;
-    ctx.fillRect(0,0,W,H);
-
-    // grid
-    ctx.strokeStyle='rgba(255,255,255,.04)';
-    ctx.lineWidth=1;
-    for(let x=0;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}
-    for(let y=0;y<H;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
-
-    // glow orb
-    const g=ctx.createRadialGradient(W*.6,H*.4,0,W*.6,H*.4,H*.5);
-    g.addColorStop(0,`hsla(${hue},100%,55%,.14)`);
-    g.addColorStop(1,'transparent');
-    ctx.fillStyle=g;
-    ctx.fillRect(0,0,W,H);
-
-    // animated sine wave
-    ctx.beginPath();
-    ctx.strokeStyle=`rgba(6,182,212,.2)`;
-    ctx.lineWidth=1.5;
-    for(let x=0;x<W;x++){
-      const y=H*.5+Math.sin(x*.02+t)*H*.12+Math.sin(x*.035+t*1.3)*H*.06;
-      x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
-    }
-    ctx.stroke();
-
-    // phone mockup outline
-    const pw=Math.min(W*.22,90), ph=Math.min(H*.75,180);
-    const px=W*.62, py=(H-ph)/2;
-    ctx.strokeStyle='rgba(255,255,255,.15)';
-    ctx.lineWidth=1.5;
-    roundRect(ctx,px,py,pw,ph,10);
-    ctx.stroke();
-    // screen
-    ctx.fillStyle='rgba(59,130,246,.1)';
-    roundRect(ctx,px+5,py+14,pw-10,ph-28,6);
-    ctx.fill();
-    // status bar
-    ctx.fillStyle='rgba(139,92,246,.2)';
-    ctx.fillRect(px+5,py+14,pw-10,10);
-    // content lines
-    for(let i=0;i<5;i++){
-      const lw=(pw-18)*(Math.sin(i+t*.5)*.25+.6);
-      ctx.fillStyle=`rgba(255,255,255,${.1+i*.02})`;
-      ctx.fillRect(px+9,py+32+i*18,lw,4);
-    }
-    // label
-    ctx.font=`500 10px JetBrains Mono,monospace`;
-    ctx.fillStyle='rgba(255,255,255,.4)';
-    ctx.fillText(label,18,H-16);
-
-    requestAnimationFrame(frame);
-  }
-
-  function roundRect(c,x,y,w,h,r){
-    c.beginPath();
-    c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);
-    c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
-    c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
-    c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);
-    c.closePath();
-  }
-
-  new ResizeObserver(resize).observe(c);
-  resize(); frame();
-}
-
-// drawCanvas('c-lms', 160, '// gtech-lms — rest api + jwt');
-// drawCanvas('c-ecom', 160, '// ecommerce — rest api + provider');
-// drawCanvas('c-pb', 185, '// portfolio-builders — lms + roadmaps');
-// drawCanvas('c-notes', 240, '// note-taking — hive + local-storage');
-
-/* ── FORM ── */
-function sendMsg(btn){
-  const name = document.getElementById('contact-name').value;
-  const email = document.getElementById('contact-email').value;
-  const subject = document.getElementById('contact-subject').value;
-  const message = document.getElementById('contact-message').value;
-
-  if(!name || !email || !message) {
-    alert("Please fill all required fields (Name, Email, Message).");
-    return;
-  }
-
-  const prevText = btn.textContent;
-  btn.textContent = 'Sending...';
-  btn.style.pointerEvents = 'none';
-
-  fetch("https://formsubmit.co/ajax/mahadevbiniraj6@gmail.com", {
-    method: "POST",
-    headers: { 
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    })
-  })
-  .then(response => response.json())
-  .then(data => {
-    btn.textContent='Message Sent ✓';
-    btn.style.background='rgba(0,255,136,.15)';
-    btn.style.color='var(--g)';
-    btn.style.border='1px solid rgba(0,255,136,.3)';
-    
-    document.getElementById('contact-name').value = '';
-    document.getElementById('contact-email').value = '';
-    document.getElementById('contact-subject').value = '';
-    document.getElementById('contact-message').value = '';
-
-    // Show popup
-    const popup = document.getElementById('success-popup');
-    if(popup) {
-      popup.classList.add('show');
-      setTimeout(closePopup, 5000);
-    }
-
-    setTimeout(()=>{
-      btn.textContent='Send Message →';
-      btn.removeAttribute('style');
-    }, 3000);
-  })
-  .catch(error => {
-    console.error(error);
-    alert("Error sending message.");
-    btn.textContent = prevText;
-    btn.removeAttribute('style');
-  });
-}
-
-function closePopup() {
-  const popup = document.getElementById('success-popup');
-  if(popup) {
-    popup.classList.remove('show');
-  }
-}
-
-/* ── BENTO MOUSE TRACK ── */
-document.querySelectorAll('.svc-card').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    card.style.setProperty('--mouse-x',`${e.clientX-r.left}px`);
-    card.style.setProperty('--mouse-y',`${e.clientY-r.top}px`);
-  });
-});
-
-/* ── ACTIVE NAV LINK ── */
-(function(){
-  const secs=document.querySelectorAll('div[id],section[id]');
-  const links=document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll',()=>{
-    let cur='';
-    secs.forEach(s=>{if(window.scrollY>=s.offsetTop-220)cur=s.id});
-    links.forEach(a=>a.style.color=a.getAttribute('href')==='#'+cur?'var(--txt)':'');
-  });
-})();
-
-/* ── CARD TILT ── */
-document.querySelectorAll('.proj-card,.svc-card').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    const x=((e.clientX-r.left)/r.width-.5)*8;
-    const y=((e.clientY-r.top)/r.height-.5)*-8;
-    card.style.transform=`translateY(-6px) perspective(800px) rotateX(${y}deg) rotateY(${x}deg)`;
-  });
-  card.addEventListener('mouseleave',()=>{card.style.transform=''});
-});
-
-/* ════════════════════════════════════════
-   PREMIUM CINEMATIC INTRO SCRIPTS
-════════════════════════════════════════ */
-/* ── INTRO TYPEWRITER ── */
-(function(){
-  const target = document.getElementById('intro-typing-text');
-  if(!target) return;
-  const text = 'FULL STACK FLUTTER DEVELOPER';
-  let index = 0;
-  
-  function type() {
-    if(index < text.length) {
-      target.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 85);
-    }
-  }
-  setTimeout(type, 1600);
-})();
-
-/* ── INTRO CANVASES & PARTICLES ── */
-(function(){
-  const c = document.getElementById('intro-particles-canvas');
-  if(!c) return;
-  const ctx = c.getContext('2d');
-  let W, H, pts = [];
-
-  function init(){
-    W = c.width = window.innerWidth;
-    H = c.height = window.innerHeight;
-    pts = [];
-    const n = Math.min(Math.floor((W*H)/25000), 50);
-    for(let i=0;i<n;i++){
-      pts.push({
-        x: Math.random()*W,
-        y: Math.random()*H,
-        vx: (Math.random()-.5)*0.3,
-        vy: (Math.random()-.5)*0.3,
-        r: Math.random()*1.8 + 0.5,
-        a: Math.random()*0.3 + 0.1,
-        hue: Math.random() > 0.5 ? 180 : 270
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.left = mx + 'px'; dot.style.top = my + 'px';
       });
+
+      function lerpRing() {
+        rx += (mx - rx) * .12; ry += (my - ry) * .12;
+        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+        requestAnimationFrame(lerpRing);
+      }
+      lerpRing();
+
+      document.querySelectorAll('a,button,.svc-card,.proj-card,.num-cell,.atag,.pill').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('link-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('link-hover'));
+      });
+    })();
+
+    /* ── NAV ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('solid', window.scrollY > 60);
+    });
+
+    /* ── MOBILE MENU ── */
+    function mobToggle() { document.getElementById('mobNav').classList.toggle('open') }
+
+    /* ── TYPING ── */
+    (function () {
+      const el = document.getElementById('typed');
+      const phrases = ['Flutter Developer', 'Full Stack Dev', 'Mobile Architect', 'UI Craftsman'];
+      let pi = 0, ci = 0, del = false;
+      function run() {
+        const cur = phrases[pi];
+        if (!del) { el.textContent = cur.slice(0, ++ci); if (ci === cur.length) { del = true; setTimeout(run, 1800); return } }
+        else { el.textContent = cur.slice(0, --ci); if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; setTimeout(run, 400); return } }
+        setTimeout(run, del ? 55 : 95);
+      }
+      setTimeout(run, 900);
+    })();
+
+    /* ── SCROLL REVEAL ── */
+    (function () {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') });
+      }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rv,.rvl,.rvr').forEach(el => obs.observe(el));
+    })();
+
+    /* ── SKILL BARS ── */
+    (function () {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('.skill-bar').forEach(b => b.style.width = b.dataset.w + '%');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: .3 });
+      document.querySelectorAll('#skills').forEach(el => obs.observe(el));
+    })();
+
+    /* ── PROJECT CANVAS VISUALS ── */
+    function drawCanvas(id, hue, label) {
+      const c = document.getElementById(id);
+      if (!c) return;
+      const ctx = c.getContext('2d');
+      let t = 0, W = 0, H = 0;
+
+      function resize() {
+        W = c.width = c.offsetWidth;
+        H = c.height = c.offsetHeight;
+      }
+
+      function frame() {
+        t += .008;
+        ctx.clearRect(0, 0, W, H);
+
+        // background gradient
+        const bg = ctx.createLinearGradient(0, 0, W, H);
+        bg.addColorStop(0, '#08080f');
+        bg.addColorStop(1, '#0c0c18');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+
+        // grid
+        ctx.strokeStyle = 'rgba(255,255,255,.04)';
+        ctx.lineWidth = 1;
+        for (let x = 0; x < W; x += 40) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke() }
+        for (let y = 0; y < H; y += 40) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke() }
+
+        // glow orb
+        const g = ctx.createRadialGradient(W * .6, H * .4, 0, W * .6, H * .4, H * .5);
+        g.addColorStop(0, `hsla(${hue},100%,55%,.14)`);
+        g.addColorStop(1, 'transparent');
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, W, H);
+
+        // animated sine wave
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(6,182,212,.2)`;
+        ctx.lineWidth = 1.5;
+        for (let x = 0; x < W; x++) {
+          const y = H * .5 + Math.sin(x * .02 + t) * H * .12 + Math.sin(x * .035 + t * 1.3) * H * .06;
+          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        // phone mockup outline
+        const pw = Math.min(W * .22, 90), ph = Math.min(H * .75, 180);
+        const px = W * .62, py = (H - ph) / 2;
+        ctx.strokeStyle = 'rgba(255,255,255,.15)';
+        ctx.lineWidth = 1.5;
+        roundRect(ctx, px, py, pw, ph, 10);
+        ctx.stroke();
+        // screen
+        ctx.fillStyle = 'rgba(59,130,246,.1)';
+        roundRect(ctx, px + 5, py + 14, pw - 10, ph - 28, 6);
+        ctx.fill();
+        // status bar
+        ctx.fillStyle = 'rgba(139,92,246,.2)';
+        ctx.fillRect(px + 5, py + 14, pw - 10, 10);
+        // content lines
+        for (let i = 0; i < 5; i++) {
+          const lw = (pw - 18) * (Math.sin(i + t * .5) * .25 + .6);
+          ctx.fillStyle = `rgba(255,255,255,${.1 + i * .02})`;
+          ctx.fillRect(px + 9, py + 32 + i * 18, lw, 4);
+        }
+        // label
+        ctx.font = `500 10px JetBrains Mono,monospace`;
+        ctx.fillStyle = 'rgba(255,255,255,.4)';
+        ctx.fillText(label, 18, H - 16);
+
+        requestAnimationFrame(frame);
+      }
+
+      function roundRect(c, x, y, w, h, r) {
+        c.beginPath();
+        c.moveTo(x + r, y); c.lineTo(x + w - r, y); c.quadraticCurveTo(x + w, y, x + w, y + r);
+        c.lineTo(x + w, y + h - r); c.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        c.lineTo(x + r, y + h); c.quadraticCurveTo(x, y + h, x, y + h - r);
+        c.lineTo(x, y + r); c.quadraticCurveTo(x, y, x + r, y);
+        c.closePath();
+      }
+
+      new ResizeObserver(resize).observe(c);
+      resize(); frame();
     }
-  }
 
-  function draw(){
-    if(!document.getElementById('intro-screen') || document.getElementById('intro-screen').classList.contains('fade-out')) return;
-    ctx.clearRect(0,0,W,H);
-    for(let i=0;i<pts.length;i++){
-      ctx.beginPath();
-      ctx.arc(pts[i].x,pts[i].y,pts[i].r,0,Math.PI*2);
-      ctx.fillStyle = `hsla(${pts[i].hue}, 100%, 70%, ${pts[i].a})`;
-      ctx.fill();
-      
-      pts[i].x += pts[i].vx;
-      pts[i].y += pts[i].vy;
-      if(pts[i].x<0||pts[i].x>W) pts[i].vx *= -1;
-      if(pts[i].y<0||pts[i].y>H) pts[i].vy *= -1;
+    // drawCanvas('c-lms', 160, '// gtech-lms — rest api + jwt');
+    // drawCanvas('c-ecom', 160, '// ecommerce — rest api + provider');
+    // drawCanvas('c-pb', 185, '// portfolio-builders — lms + roadmaps');
+    // drawCanvas('c-notes', 240, '// note-taking — hive + local-storage');
+
+    /* ── FORM ── */
+    function sendMsg(btn) {
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value;
+
+      if (!name || !email || !message) {
+        alert("Please fill all required fields (Name, Email, Message).");
+        return;
+      }
+
+      const prevText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.style.pointerEvents = 'none';
+
+      fetch("https://formsubmit.co/ajax/mahadevbiniraj6@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          btn.textContent = 'Message Sent ✓';
+          btn.style.background = 'rgba(0,255,136,.15)';
+          btn.style.color = 'var(--g)';
+          btn.style.border = '1px solid rgba(0,255,136,.3)';
+
+          document.getElementById('contact-name').value = '';
+          document.getElementById('contact-email').value = '';
+          document.getElementById('contact-subject').value = '';
+          document.getElementById('contact-message').value = '';
+
+          // Show popup
+          const popup = document.getElementById('success-popup');
+          if (popup) {
+            popup.classList.add('show');
+            setTimeout(closePopup, 5000);
+          }
+
+          setTimeout(() => {
+            btn.textContent = 'Send Message →';
+            btn.removeAttribute('style');
+          }, 3000);
+        })
+        .catch(error => {
+          console.error(error);
+          alert("Error sending message.");
+          btn.textContent = prevText;
+          btn.removeAttribute('style');
+        });
     }
-    requestAnimationFrame(draw);
-  }
 
-  window.addEventListener('resize', init);
-  init(); draw();
-})();
+    function closePopup() {
+      const popup = document.getElementById('success-popup');
+      if (popup) {
+        popup.classList.remove('show');
+      }
+    }
 
-/* ── EXIT INTRO ── */
-function exitIntro() {
-  const intro = document.getElementById('intro-screen');
-  if (intro && !intro.classList.contains('fade-out')) {
-    intro.classList.add('fade-out');
-    document.body.classList.remove('intro-active');
-    setTimeout(() => {
-      intro.remove();
-    }, 1200);
-  }
-}
+    /* ── BENTO MOUSE TRACK ── */
+    document.querySelectorAll('.svc-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${e.clientX - r.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - r.top}px`);
+      });
+    });
 
-// Auto transition after 7.5 seconds
-setTimeout(exitIntro, 7500);
-</script>
+    /* ── ACTIVE NAV LINK ── */
+    (function () {
+      const secs = document.querySelectorAll('div[id],section[id]');
+      const links = document.querySelectorAll('.nav-links a');
+      window.addEventListener('scroll', () => {
+        let cur = '';
+        secs.forEach(s => { if (window.scrollY >= s.offsetTop - 220) cur = s.id });
+        links.forEach(a => a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--txt)' : '');
+      });
+    })();
+
+    /* ── CARD TILT ── */
+    document.querySelectorAll('.proj-card,.svc-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width - .5) * 8;
+        const y = ((e.clientY - r.top) / r.height - .5) * -8;
+        card.style.transform = `translateY(-6px) perspective(800px) rotateX(${y}deg) rotateY(${x}deg)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = '' });
+    });
+
+    /* ════════════════════════════════════════
+       PREMIUM CINEMATIC INTRO SCRIPTS
+    ════════════════════════════════════════ */
+    /* ── INTRO TYPEWRITER ── */
+    (function () {
+      const target = document.getElementById('intro-typing-text');
+      if (!target) return;
+      const text = 'FULL STACK FLUTTER DEVELOPER';
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          target.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 85);
+        }
+      }
+      setTimeout(type, 1600);
+    })();
+
+    /* ── INTRO CANVASES & PARTICLES ── */
+    (function () {
+      const c = document.getElementById('intro-particles-canvas');
+      if (!c) return;
+      const ctx = c.getContext('2d');
+      let W, H, pts = [];
+
+      function init() {
+        W = c.width = window.innerWidth;
+        H = c.height = window.innerHeight;
+        pts = [];
+        const n = Math.min(Math.floor((W * H) / 25000), 50);
+        for (let i = 0; i < n; i++) {
+          pts.push({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            vx: (Math.random() - .5) * 0.3,
+            vy: (Math.random() - .5) * 0.3,
+            r: Math.random() * 1.8 + 0.5,
+            a: Math.random() * 0.3 + 0.1,
+            hue: Math.random() > 0.5 ? 180 : 270
+          });
+        }
+      }
+
+      function draw() {
+        if (!document.getElementById('intro-screen') || document.getElementById('intro-screen').classList.contains('fade-out')) return;
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < pts.length; i++) {
+          ctx.beginPath();
+          ctx.arc(pts[i].x, pts[i].y, pts[i].r, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${pts[i].hue}, 100%, 70%, ${pts[i].a})`;
+          ctx.fill();
+
+          pts[i].x += pts[i].vx;
+          pts[i].y += pts[i].vy;
+          if (pts[i].x < 0 || pts[i].x > W) pts[i].vx *= -1;
+          if (pts[i].y < 0 || pts[i].y > H) pts[i].vy *= -1;
+        }
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', init);
+      init(); draw();
+    })();
+
+    /* ── EXIT INTRO ── */
+    function exitIntro() {
+      const intro = document.getElementById('intro-screen');
+      if (intro && !intro.classList.contains('fade-out')) {
+        intro.classList.add('fade-out');
+        document.body.classList.remove('intro-active');
+        setTimeout(() => {
+          intro.remove();
+        }, 1200);
+      }
+    }
+
+    // Auto transition after 7.5 seconds
+    setTimeout(exitIntro, 7500);
+  </script>
 </body>
+
 </html>
